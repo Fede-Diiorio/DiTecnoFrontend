@@ -1,11 +1,14 @@
 import classes from './Header.module.scss';
-import Button from '../Button/Button';
+import { FaBars } from "react-icons/fa6";
 
 const Header = () => {
     return (
-        <header>
-            <h1>Test</h1>
-            <Button>Testeando</Button>
+        <header className={classes.background}>
+            <div className={classes.container}>
+                <h1 className={classes.headerTitle}>Imagen de DiTecno</h1>
+                <FaBars className={classes.headerIcon} />
+            </div>
+
         </header>
     )
 }
