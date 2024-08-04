@@ -1,0 +1,19 @@
+.background {
+    background-color: $darkGrey;
+    padding-top: 2rem;
+
+    .container {
+        max-width: 70vw;
+        margin: 0 auto;
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .infoLogo {
+                width: 12rem;
+            }
+        }
+    }
+}

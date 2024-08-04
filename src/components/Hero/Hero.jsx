@@ -7,7 +7,7 @@ const Hero = () => {
             <div className={classes.container}>
                 <h1>DiTecno, aberturas de PVC</h1>
                 <h4>Asistente de presupuesto</h4>
-                <FaAnglesDown className={classes.heroIcon} />
+                <a href="#footer"><FaAnglesDown className={classes.heroIcon} /></a>
             </div>
         </section>
     )
