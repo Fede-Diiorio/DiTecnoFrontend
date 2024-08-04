@@ -8,6 +8,8 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;700&display=swap');
+        $primaryFont: "IBM Plex Sans", sans-serif;
         $primaryColor: #0167B1;
         $lightPrimaryColor: #01AEF2;
         $secondary: #FFDA74;

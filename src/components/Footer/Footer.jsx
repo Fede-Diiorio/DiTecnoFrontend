@@ -10,29 +10,28 @@ const Footer = () => {
                     <div className={classes.info}>
                         <Link to='/'><img className={classes.infoLogo} src={ditecnoLogo} alt="Logo de la Empresa" /></Link>
 
-                        <div>
+                        <div className={classes.infoColumn}>
                             <h4>Compañia</h4>
                             <ul>
-                                <li><Link>Sobre Nosotros</Link></li>
-                                <li><Link>Nuestros Productos</Link></li>
+                                <li><Link className={classes.infoLi}>Sobre Nosotros</Link></li>
+                                <li><Link className={classes.infoLi}>Nuestros Productos</Link></li>
                             </ul>
                         </div>
 
-                        <div>
+                        <div className={classes.infoColumn}>
                             <h4>Ayuda</h4>
                             <ul>
-                                <li><Link>Preguntas</Link></li>
-                                <li><Link>Compras</Link></li>
+                                <li><Link className={classes.infoLi}>Preguntas</Link></li>
+                                <li><Link className={classes.infoLi}>Compras</Link></li>
                             </ul>
                         </div>
 
-                        <div>
+                        <div className={classes.infoColumn}>
                             <h4>Siguenos</h4>
-
                             <ul>
-                                <li><Link>Facebook</Link></li>
-                                <li><Link>Instagram</Link></li>
-                                <li><Link>LinkedIn</Link></li>
+                                <li><Link className={classes.infoLi}>Facebook</Link></li>
+                                <li><Link className={classes.infoLi}>Instagram</Link></li>
+                                <li><Link className={classes.infoLi}>LinkedIn</Link></li>
                             </ul>
                         </div>
                     </div>

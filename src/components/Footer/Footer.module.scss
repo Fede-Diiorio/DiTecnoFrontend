@@ -13,6 +13,30 @@
 
             .infoLogo {
                 width: 12rem;
+
+            }
+
+            .infoColumn {
+                h4 {
+                    color: $lightPrimaryColor;
+                }
+
+                li {
+                    transition: all .3s ease-in-out;
+
+                    &:hover {
+                        scale: 1.1;
+                    }
+
+                    .infoLi {
+                        color: $white;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            color: $primaryColor;
+                        }
+                    }
+                }
             }
         }
     }
