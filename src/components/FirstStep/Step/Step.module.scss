@@ -1,0 +1,12 @@
+.card {
+    .cardNumber {
+        border-bottom: 3px solid $lightPrimaryColor;
+        width: 3rem;
+    }
+
+    .cardParagraph {
+        p {
+            line-height: 1;
+        }
+    }
+}

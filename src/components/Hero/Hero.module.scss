@@ -5,6 +5,7 @@
     background-position: center;
     height: 85vh;
     position: relative;
+    border-bottom: 2px solid $lightPrimaryColor;
 
     .container {
         position: absolute;
@@ -36,11 +37,11 @@
             transition: all .3s ease-in-out;
 
             &:hover {
-                color: $secondary;
+                color: $secondaryColor;
                 scale: 1.1;
                 cursor: pointer;
                 background-color: $primaryColor;
-                border: 1px solid $darkSecondary;
+                border: 1px solid $darkSecondaryColor;
             }
         }
     }

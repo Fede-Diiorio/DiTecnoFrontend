@@ -9,11 +9,13 @@ export default defineConfig({
       scss: {
         additionalData: `
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap');
         $primaryFont: "IBM Plex Sans", sans-serif;
+        $secondaryFont: "Edu AU VIC WA NT Hand", cursive;
         $primaryColor: #0167B1;
         $lightPrimaryColor: #01AEF2;
-        $secondary: #FFDA74;
-        $darkSecondary: #A48B47;
+        $secondaryColor: #FFDA74;
+        $darkSecondaryColor: #A48B47;
         $white: #ffffff;
         $black: #000000;
         $grey: #97989A;

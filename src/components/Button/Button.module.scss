@@ -1,21 +1,20 @@
 .button {
+    font-family: $secondaryFont;
     color: $white;
-    background-color: $lightPrimaryColor;
+    background-color: $primaryColor;
     padding: .5rem 1rem;
     font-size: 1.4rem;
-    border: 2px solid $secondary;
+    border: 2px solid $lightPrimaryColor;
     border-radius: 1rem;
     min-width: 7rem;
     text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
     transition: all .3s ease-in-out;
 
 
     &:hover {
         background-color: $primaryColor;
-        color: $secondary;
-        border: 2px solid $lightPrimaryColor;
+        color: $secondaryColor;
+        border: 2px solid $secondaryColor;
         cursor: pointer;
         scale: 1.1;
     }

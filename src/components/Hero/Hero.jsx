@@ -10,7 +10,7 @@ const Hero = () => {
                 <a href="#footer"><FaAnglesDown className={classes.heroIcon} /></a>
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default Hero;
