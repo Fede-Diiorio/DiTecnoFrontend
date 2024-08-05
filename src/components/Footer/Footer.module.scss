@@ -1,6 +1,6 @@
 .background {
     background-color: $darkGrey;
-    padding-top: 2rem;
+    padding: 2rem 0;
 
     .container {
         max-width: 70vw;
@@ -19,16 +19,28 @@
             .infoColumn {
                 h4 {
                     color: $lightPrimaryColor;
+                    margin-bottom: 1rem;
+                }
+
+                .icons {
+                    display: flex;
+                    gap: 1rem;
                 }
 
                 li {
                     transition: all .3s ease-in-out;
+                    margin-bottom: .5rem;
 
                     &:hover {
                         scale: 1.1;
                     }
 
-                    .infoLi {
+                    .infoIcon {
+                        font-size: 1.5rem;
+                    }
+
+                    .infoLi,
+                    .infoIcon {
                         color: $white;
                         transition: all .3s ease-in-out;
 
@@ -36,6 +48,7 @@
                             color: $primaryColor;
                         }
                     }
+
                 }
             }
         }

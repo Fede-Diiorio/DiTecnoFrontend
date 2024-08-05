@@ -8,7 +8,7 @@ const FirstStep = () => {
             <div className={classes.frame}>
                 <div className={classes.container}>
                     <h2>Elige tu puerta y ventana ideal</h2>
-                    <p>Cinco simples pasos para encontrar la solución adecuada a tu necesidad.</p>
+                    <p>Cinco simples pasos para encontrar la solución adecuada a tus necesidades.</p>
                     <div className={classes.cards}>
                         <Step number={'1'} paragraph={'Selecciona el tipo de producto que necesitas.'} />
                         <Step number={'2'} paragraph={'Elige la dirección de apertura de tu puerta o ventana.'} />

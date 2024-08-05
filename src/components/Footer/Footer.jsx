@@ -1,6 +1,10 @@
 import classes from './Footer.module.scss';
 import ditecnoLogo from '../../assets/ditecnoLogoCompleto.png'
 import { Link } from 'react-router-dom';
+import { FaSquareFacebook } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa6";
+
 
 const Footer = () => {
     return (
@@ -28,10 +32,10 @@ const Footer = () => {
 
                         <div className={classes.infoColumn}>
                             <h4>Siguenos</h4>
-                            <ul>
-                                <li><Link className={classes.infoLi}>Facebook</Link></li>
-                                <li><Link className={classes.infoLi}>Instagram</Link></li>
-                                <li><Link className={classes.infoLi}>LinkedIn</Link></li>
+                            <ul className={classes.icons}>
+                                <li><a href="#" className={classes.infoIcon}><FaSquareFacebook className={classes.icon} /></a></li>
+                                <li><a href="#" className={classes.infoIcon}><FaInstagram className={classes.icon} /></a></li>
+                                <li><a href="#" className={classes.infoIcon}><FaLinkedin className={classes.icon} /></a></li>
                             </ul>
                         </div>
                     </div>
