@@ -17,7 +17,7 @@ const FirstStep = () => {
                         <Step number={'5'} paragraph={'Indica la cantidad y las dimensiones de los productos.'} />
                     </div>
 
-                    <Button>Comenzar</Button>
+                    <Button to={'/product'}>Comenzar</Button>
                 </div>
             </div>
         </section>

@@ -3,6 +3,7 @@ import Header from './components/Header/Header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 import IndexBody from './components/IndexBody/IndexBody';
+import Product from './components/Product/Product'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<IndexBody />} />
+          <Route path='/:pid' element={<Product />} />
         </Routes>
         <Footer />
       </BrowserRouter>
