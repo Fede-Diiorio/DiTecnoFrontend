@@ -9,7 +9,7 @@ const Hero = () => {
                 <div className={classes.hero}>
                     <h1>DiTecno, aberturas de PVC</h1>
                     <h4>Asistente de presupuesto</h4>
-                    <a href="#footer"><FaAnglesDown className={classes.heroIcon} /></a>
+                    <a href="#firstStep"><FaAnglesDown className={classes.heroIcon} /></a>
                 </div>
             </HeroBackground>
         </>

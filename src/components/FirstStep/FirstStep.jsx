@@ -4,7 +4,7 @@ import Button from '../Button/Button'
 
 const FirstStep = () => {
     return (
-        <section className={classes.section}>
+        <section className={classes.section} id='firstStep'>
             <div className={classes.frame}>
                 <div className={classes.container}>
                     <h2>Elige tu puerta y ventana ideal</h2>
