@@ -4,10 +4,12 @@ import DoorOptions from './DoorOptions/DoorOptions';
 
 const Door = () => {
     return (
-        <section>
-            <Routes>
-                <Route path='/' element={<DoorOptions />} />
-            </Routes>
+        <section className={classes.heroImage}>
+            <div className={classes.container}>
+                <Routes>
+                    <Route path='/' element={<DoorOptions />} />
+                </Routes>
+            </div>
         </section>
     );
 };
