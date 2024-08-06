@@ -1,0 +1,20 @@
+.windowOptions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h2,
+    p {
+        color: $white;
+    }
+
+    p {
+        margin-bottom: 5rem;
+    }
+
+    .options {
+        display: flex;
+        gap: 2rem;
+    }
+}
