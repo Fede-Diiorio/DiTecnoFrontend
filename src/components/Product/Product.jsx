@@ -9,8 +9,8 @@ const Product = () => {
                     <h2>Elija una opción</h2>
                     <p>Para precisar su presupuesto de manera óptima, complete con la opción deseada.</p>
                     <div className={classes.options}>
-                        <Button to={'/door'}>Puerta</Button>
-                        <Button to={'/window'}>Ventana</Button>
+                        <Button to={'/puerta'}>Puerta</Button>
+                        <Button to={'/ventana'}>Ventana</Button>
                     </div>
                 </div>
             </div>

@@ -12,12 +12,12 @@ const WindowOptions = () => {
                         <h2>Tipo de apertura</h2>
                         <p>Seleccione la dirección de apertura que desea para su puerta.</p>
                         <div className={classes.options}>
-                            <Button to={'/window/outward'}>Exterior</Button>
-                            <Button to={'/window/inward'}>Interior</Button>
-                            <Button to={'/window/sliding'}>Corrediza</Button>
+                            <Button to={'exterior'}>Exterior</Button>
+                            <Button to={'interior'}>Interior</Button>
+                            <Button to={'corrediza'}>Corrediza</Button>
                         </div>
                     </div>
-                    <Link to={'/product'}><TiArrowBack className={classes.backArrow} /></Link>
+                    <Link to={'/producto'}><TiArrowBack className={classes.backArrow} /></Link>
                 </div>
             </div>
         </section>
