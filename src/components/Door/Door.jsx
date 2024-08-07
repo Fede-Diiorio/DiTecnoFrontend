@@ -1,6 +1,7 @@
 import classes from './Door.module.scss';
 import { Route, Routes } from 'react-router-dom';
 import DoorOptions from './DoorOptions/DoorOptions';
+import DoorColor from './DoorColor/DoorColor';
 
 const Door = () => {
     return (
@@ -8,6 +9,7 @@ const Door = () => {
             <div className={classes.container}>
                 <Routes>
                     <Route path='/' element={<DoorOptions />} />
+                    <Route path=':option' element={<DoorColor />} />
                 </Routes>
             </div>
         </section>

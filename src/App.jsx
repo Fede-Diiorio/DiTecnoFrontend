@@ -18,8 +18,8 @@ function App() {
         <Routes>
           <Route path='/' element={<IndexBody />} />
           <Route path='/product' element={<Product />} />
-          <Route path='/door' element={<Door />} />
-          <Route path='/window' element={<Window />} />
+          <Route path='/door/*' element={<Door />} />
+          <Route path='/window/*' element={<Window />} />
         </Routes>
         <Footer />
       </BrowserRouter>
