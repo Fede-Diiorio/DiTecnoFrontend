@@ -2,8 +2,13 @@ import { Link } from 'react-router-dom';
 import classes from './DoorColor.module.scss';
 import oakTexcture from '../../../assets/roble.jpg';
 import walnutTexcture from '../../../assets/nogal.jpg';
+import { TiArrowBack } from "react-icons/ti";
+import { useParams } from 'react-router-dom';
 
 const DoorColor = () => {
+
+    const { option } = useParams();
+
     return (
         <section className={classes.heroImage}>
             <div className={classes.shadow}>
@@ -25,6 +30,7 @@ const DoorColor = () => {
                             </Link>
                         </div>
                     </div>
+                    <Link to={`/puerta`}><TiArrowBack className={classes.backArrow} /></Link>
                 </div>
             </div>
         </section>

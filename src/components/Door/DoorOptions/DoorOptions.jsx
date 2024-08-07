@@ -16,8 +16,7 @@ const DoorOptions = () => {
                             <Button to={'interior'}>Apertura hacia adentro</Button>
                         </div>
                     </div>
-                    <Link to={'/product'}><TiArrowBack className={classes.backArrow} /></Link>
-
+                    <Link to={'/producto'}><TiArrowBack className={classes.backArrow} /></Link>
                 </div>
             </div>
         </section>
