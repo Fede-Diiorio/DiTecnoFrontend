@@ -7,6 +7,7 @@ import Product from './components/Product/Product'
 import ScrollToTop from './utils/ScrollToTop';
 import Door from './components/Door/Door';
 import Window from './components/Window/Window';
+import Selector from './components/Selector/Selector';
 
 function App() {
 
@@ -16,10 +17,11 @@ function App() {
         <ScrollToTop />
         <Header />
         <Routes>
-          <Route path='/' element={<IndexBody />} />
+          {/* <Route path='/' element={<IndexBody />} />
           <Route path='/producto' element={<Product />} />
           <Route path='/puerta/*' element={<Door />} />
-          <Route path='/ventana/*' element={<Window />} />
+          <Route path='/ventana/*' element={<Window />} /> */}
+          <Route path='/' element={<Selector />} />
         </Routes>
         <Footer />
       </BrowserRouter>

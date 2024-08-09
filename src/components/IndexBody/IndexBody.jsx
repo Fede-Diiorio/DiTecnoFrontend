@@ -1,5 +1,5 @@
 import classes from './IndexBody.module.scss';
-import Hero from './Hero/Hero';
+import Hero from '../Hero/Hero';
 import FirstStep from '../FirstStep/FirstStep';
 
 const IndexBody = () => {
