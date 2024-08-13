@@ -21,7 +21,7 @@ function App() {
           <Route path='/producto' element={<Product />} />
           <Route path='/puerta/*' element={<Door />} />
           <Route path='/ventana/*' element={<Window />} /> */}
-          <Route path='/' element={<Selector />} />
+          <Route path='/' element={<Selector title={'Testeando'} description={'Esto es una descripcion'} />} />
         </Routes>
         <Footer />
       </BrowserRouter>
