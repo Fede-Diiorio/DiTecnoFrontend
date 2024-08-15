@@ -12,6 +12,11 @@
         .headerTitle {
             margin: 0;
             width: 15rem;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                scale: 1.1;
+            }
         }
 
         .headerIcon {

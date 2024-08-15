@@ -3,16 +3,16 @@ import { useEffect, useState } from 'react';
 import Button from '../Button/Button';
 import { TiArrowBack } from "react-icons/ti";
 import { Link } from 'react-router-dom';
+import { getDoors } from '../../utils/getDoors';
 
 
-const Selector = ({ title, description, returnUrl }) => {
+const Selector = ({ title, description, returnUrl, }) => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:8080/api/ventana')
-            .then(response => response.json())
-            .then(data => setProducts(data))
-            .catch(error => console.error('Error en el fetch: ', error));
+        getDoors().then(data => {
+            setProducts(data);
+        });
     }, []);
 
     return (

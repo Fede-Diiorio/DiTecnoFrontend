@@ -17,11 +17,10 @@ function App() {
         <ScrollToTop />
         <Header />
         <Routes>
-          {/* <Route path='/' element={<IndexBody />} />
+          <Route path='/' element={<IndexBody />} />
           <Route path='/producto' element={<Product />} />
           <Route path='/puerta/*' element={<Door />} />
-          <Route path='/ventana/*' element={<Window />} /> */}
-          <Route path='/' element={<Selector title={'Testeando'} description={'Esto es una descripcion'} />} />
+          <Route path='/ventana/*' element={<Window />} />
         </Routes>
         <Footer />
       </BrowserRouter>
