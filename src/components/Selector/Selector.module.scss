@@ -32,11 +32,6 @@
                 p {
                     margin-bottom: 5rem;
                 }
-
-                .options {
-                    display: flex;
-                    gap: 2rem;
-                }
             }
 
             .backArrow {
@@ -48,6 +43,26 @@
                 &:hover {
                     scale: 1.1;
                     color: $lightPrimaryColor;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 992px) {
+    .heroImage {
+        .shadow {
+            .container {
+                .paramsOptions {
+                    margin-top: 0;
+
+                    h2 {
+                        margin-bottom: 1rem;
+                    }
+
+                    p {
+                        margin-bottom: 2rem;
+                    }
                 }
             }
         }

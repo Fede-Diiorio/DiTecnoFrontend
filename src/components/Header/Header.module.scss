@@ -23,11 +23,20 @@
             color: $white;
             font-size: 2.5rem;
             transition: all .3s ease-in-out;
+            max-width: 24rem;
 
             &:hover {
                 cursor: pointer;
                 scale: 1.1;
             }
+        }
+    }
+}
+
+@media(max-width: 668px) {
+    .background {
+        .container {
+            flex-direction: column;
         }
     }
 }

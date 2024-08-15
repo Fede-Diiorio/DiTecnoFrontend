@@ -11,7 +11,6 @@ const Header = () => {
                 <Link to={'/'}><img src={ditecnoImage} alt="Imagen de DiTecno" className={classes.headerTitle} /></Link>
                 <FaBars className={classes.headerIcon} />
             </div>
-
         </header>
     );
 };

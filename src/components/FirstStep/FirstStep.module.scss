@@ -40,3 +40,15 @@
 
     }
 }
+
+@media(max-width: 992px) {
+    .section {
+        .frame {
+            .container {
+                .cards {
+                    display: none;
+                }
+            }
+        }
+    }
+}
