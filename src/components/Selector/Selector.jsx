@@ -3,17 +3,16 @@ import { useEffect, useState } from 'react';
 import Button from '../Button/Button';
 import { TiArrowBack } from "react-icons/ti";
 import { Link } from 'react-router-dom';
-import { getDoors } from '../../utils/getDoors';
 
 
-const Selector = ({ title, description, returnUrl, }) => {
+const Selector = ({ title, description, returnUrl, data }) => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        getDoors().then(data => {
+        if (data) {
             setProducts(data);
-        });
-    }, []);
+        };
+    }, [data]);
 
     return (
         <section className={classes.heroImage}>
