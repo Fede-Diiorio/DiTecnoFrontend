@@ -37,3 +37,21 @@ a {
 li {
     list-style-type: none;
 }
+
+.optionButtonflex {
+    display: flex;
+    gap: 2rem;
+
+    li {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: .5rem;
+        align-items: center;
+
+        img {
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+
+}

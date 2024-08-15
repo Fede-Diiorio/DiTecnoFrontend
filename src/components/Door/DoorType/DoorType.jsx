@@ -1,7 +1,6 @@
 import Selector from "../../Selector/Selector";
 import { getDoorsType } from "../../../utils/getDoors";
 import { useEffect, useState } from "react";
-import classes from './DoorType.module.scss';
 import Button from "../../Button/Button";
 import { useParams } from "react-router-dom";
 
@@ -19,7 +18,7 @@ const DoorType = () => {
     return (
         <>
             <Selector title={'Dirección de apertura'} description={'Seleccione la dirección de apertura para su puerta.'} returnUrl={'/puerta'}>
-                <ul className={classes.options}>
+                <ul className='optionButtonflex'>
                     {types.map(product => (
                         <li key={product.id}>
                             <Button to={product.slug}>{product.name}</Button>

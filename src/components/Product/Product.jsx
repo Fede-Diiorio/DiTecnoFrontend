@@ -8,7 +8,7 @@ const Product = () => {
                 <div className={classes.product}>
                     <h2>Elija una opción</h2>
                     <p>Para precisar su presupuesto de manera óptima, complete con la opción deseada.</p>
-                    <div className={classes.options}>
+                    <div className='optionButtonflex'>
                         <Button to={'/puerta'}>Puerta</Button>
                         <Button to={'/ventana'}>Ventana</Button>
                     </div>
