@@ -41,12 +41,15 @@ li {
 .optionButtonflex {
     display: flex;
     gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 
     li {
         display: flex;
         flex-direction: column-reverse;
-        gap: .5rem;
         align-items: center;
+        gap: .5rem;
 
         .doorColor {
             width: 6rem;
@@ -57,6 +60,4 @@ li {
             height: 6rem;
         }
     }
-
-
 }
