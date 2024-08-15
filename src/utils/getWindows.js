@@ -1,5 +1,5 @@
-export const getDoors = () => {
-    return fetch('http://localhost:8080/api/puerta')
+export const getWindows = () => {
+    return fetch('http://localhost:8080/api/ventana')
         .then(response => response.json())
         .catch(error => {
             console.error('Error en el fetch: ', error);
@@ -7,8 +7,8 @@ export const getDoors = () => {
         });
 };
 
-export const getDoorsType = (opening) => {
-    return fetch(`http://localhost:8080/api/puerta/${opening}`)
+export const getWindowsStyle = (opening) => {
+    return fetch(`http://localhost:8080/api/ventana/${opening}`)
         .then(response => response.json())
         .catch(error => {
             console.error('Error en el fetch: ', error);
@@ -16,8 +16,8 @@ export const getDoorsType = (opening) => {
         });
 };
 
-export const getDoorsColors = (opening, type) => {
-    return fetch(`http://localhost:8080/api/puerta/${opening}/${type}`)
+export const getWindowsTypes = (opening, style) => {
+    return fetch(`http://localhost:8080/api/ventana/${opening}/${style}`)
         .then(response => response.json())
         .catch(error => {
             console.error('Error en el fetch: ', error);
@@ -25,8 +25,8 @@ export const getDoorsColors = (opening, type) => {
         });
 };
 
-export const getDoorsDesigns = (opening, type, color) => {
-    return fetch(`http://localhost:8080/api/puerta/${opening}/${type}/${color}`)
+export const getWindowsColors = (opening, style, type) => {
+    return fetch(`http://localhost:8080/api/ventana/${opening}/${style}/${type}`)
         .then(response => response.json())
         .catch(error => {
             console.error('Error en el fetch: ', error);

@@ -1,11 +1,17 @@
 import { Route, Routes } from 'react-router-dom';
-import WindowOptions from './WindowOptions/WindowOptions';
+import WindowOpening from './WindowOpening/WindowOpening';
+import WindowStyle from './WindowStyle/WindowStyle';
+import WindowType from './WindowType/WindowType';
+import WindowColor from './WindowColor/WindowColor';
 
 const Window = () => {
     return (
         <section>
             <Routes>
-                <Route path='/' element={<WindowOptions />} />
+                <Route path='/' element={<WindowOpening />} />
+                <Route path='/:opening' element={<WindowStyle />} />
+                <Route path='/:opening/:style' element={<WindowType />} />
+                <Route path='/:opening/:style/:type' element={<WindowColor />} />
             </Routes>
         </section>
     );

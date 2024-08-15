@@ -1,26 +1,25 @@
 import Selector from "../../Selector/Selector";
-import { getDoorsColors } from "../../../utils/getDoors";
+import { getWindowsTypes } from "../../../utils/getWindows";
 import { useEffect, useState } from "react";
 import Button from "../../Button/Button";
 import { useParams } from "react-router-dom";
 
-const DoorColor = () => {
-    const { opening, type } = useParams();
+const WindowType = () => {
+    const { opening, style } = useParams();
     const [colors, setColors] = useState([]);
 
     useEffect(() => {
-        getDoorsColors(opening, type).then(data => {
+        getWindowsTypes(opening, style).then(data => {
             setColors(data);
         });
     }, []);
 
     return (
         <>
-            <Selector title={'Color para su puerta'} description={'Seleccione el color que mejor se adapte a sus necesidades.'} returnUrl={`/puerta/${opening}`}>
+            <Selector title={'Tipo de abertuna'} description={'Seleccione el tipo de abertura que sea de su preferencia.'} returnUrl={`/ventana/${opening}`}>
                 <ul className='optionButtonflex'>
                     {colors.map(product => (
                         <li key={product.id}>
-                            <img className="doorColor" src={product.image} alt={product.name} />
                             <Button to={product.slug}>{product.name}</Button>
                         </li>
                     ))}
@@ -30,4 +29,4 @@ const DoorColor = () => {
     );
 };
 
-export default DoorColor;
+export default WindowType;
