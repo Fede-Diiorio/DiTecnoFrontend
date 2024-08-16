@@ -1,8 +1,8 @@
 import Selector from "../../Selector/Selector";
-import classes from './SimpleForm.module.scss';
+import classes from './DobleForm.module.scss';
 import { useParams } from "react-router-dom";
 
-const SimpleForm = ({ product }) => {
+const DobleForm = ({ product }) => {
 
     const { opening, type, color } = useParams();
 
@@ -14,12 +14,22 @@ const SimpleForm = ({ product }) => {
                 <div className={classes.container}>
 
                     <div className={classes.field}>
-                        <label>Ancho (cm): </label>
+                        <label>Ancho de la hoja fija(cm): </label>
                         <input type="number" placeholder="Ancho" min={20} name='wight' />
                     </div>
 
                     <div className={classes.field}>
-                        <label>Alto (cm): </label>
+                        <label>Alto de la hoja fija(cm): </label>
+                        <input type="number" placeholder="Alto" min={20} name='height' />
+                    </div>
+
+                    <div className={classes.field}>
+                        <label>Ancho de la hoja móvil(cm): </label>
+                        <input type="number" placeholder="Ancho" min={20} name='wight' />
+                    </div>
+
+                    <div className={classes.field}>
+                        <label>Alto de la hoja móvil(cm): </label>
                         <input type="number" placeholder="Alto" min={20} name='height' />
                     </div>
 
@@ -38,4 +48,4 @@ const SimpleForm = ({ product }) => {
     );
 };
 
-export default SimpleForm;
+export default DobleForm;
