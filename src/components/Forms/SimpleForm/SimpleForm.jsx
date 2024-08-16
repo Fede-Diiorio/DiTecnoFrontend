@@ -4,10 +4,12 @@ import { useParams } from "react-router-dom";
 
 const SimpleForm = ({ product }) => {
 
-    const { opening, type, color } = useParams();
+    const { opening, style, type, color } = useParams();
+
+    const url = product === 'puerta' ? `/${product}/${opening}/${type}/${color}` : `/${product}/${opening}/${style}/${type}`;
 
     return (
-        <Selector title={'Finalizar producto'} description={'Complete con los datos solicitados para terminar de procesar su solicitud.'} returnUrl={`/${product}/${opening}/${type}/${color}`}>
+        <Selector title={'Finalizar producto'} description={'Complete con los datos solicitados para terminar de procesar su solicitud.'} returnUrl={url}>
             <form action="" className={classes.form}>
                 <legend>Complete todos los campos para terminar de cargar su producto</legend>
 
