@@ -2,9 +2,11 @@ import Selector from "../Selector/Selector";
 import { useParams } from "react-router-dom";
 import classes from './Forms.module.scss';
 
-const Forms = () => {
+const Forms = ({ product }) => {
 
-    const { type } = useParams();
+    const { opening, type, design, color } = useParams();
+
+    const url = `http://localhost:8080/api/${product}/${opening}/${type}/${design}/${color}`
 
     if (type !== 'simple') {
         return (
@@ -16,7 +18,7 @@ const Forms = () => {
 
                         <div className={classes.field}>
                             <label>Ancho de la hoja fija(cm): </label>
-                            <input type="number" placeholder="Ancho" min={20} name='fixedWight' />
+                            <input type="number" placeholder="Ancho" min={20} name='fixedWidth' />
                         </div>
 
                         <div className={classes.field}>
@@ -26,7 +28,7 @@ const Forms = () => {
 
                         <div className={classes.field}>
                             <label>Ancho de la hoja móvil(cm): </label>
-                            <input type="number" placeholder="Ancho" min={20} name='wight' />
+                            <input type="number" placeholder="Ancho" min={20} name='width' />
                         </div>
 
                         <div className={classes.field}>
@@ -36,7 +38,7 @@ const Forms = () => {
 
                         <div className={classes.field}>
                             <label>Cantidad: </label>
-                            <input type="number" placeholder="Cantitdad" min={1} name='quatity' />
+                            <input type="number" placeholder="Cantitdad" min={1} name='quantity' />
                         </div>
 
                     </div>
@@ -49,7 +51,7 @@ const Forms = () => {
     } else {
         return (
             <Selector title={'Finalizar producto'} description={'Complete con los datos solicitados para terminar de procesar su solicitud.'}>
-                <form action="" className={classes.form}>
+                <form action={url} className={classes.form}>
                     <legend>Complete todos los campos para terminar de cargar su producto</legend>
 
                     <div className={classes.container}>

@@ -15,7 +15,7 @@ const Door = () => {
                     <Route path='/:opening' element={<DoorType />} />
                     <Route path='/:opening/:type/' element={<DoorDesign />} />
                     <Route path='/:opening/:type/:design' element={<DoorColor />} />
-                    <Route path='/:opening/:type/:color/:design' element={<Forms />} />
+                    <Route path='/:opening/:type/:color/:design' element={<Forms product={'puerta'} />} />
                 </Routes>
             </div>
         </section>

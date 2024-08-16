@@ -13,7 +13,7 @@ const Window = () => {
                 <Route path='/:opening' element={<WindowStyle />} />
                 <Route path='/:opening/:style' element={<WindowType />} />
                 <Route path='/:opening/:style/:type' element={<WindowColor />} />
-                <Route path='/:opening/:style/:type/:color' element={<Forms />} />
+                <Route path='/:opening/:style/:type/:color' element={<Forms product={'ventana'} />} />
             </Routes>
         </section>
     );
