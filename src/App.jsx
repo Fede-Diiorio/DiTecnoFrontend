@@ -7,7 +7,7 @@ import Product from './components/Product/Product'
 import ScrollToTop from './utils/ScrollToTop';
 import Door from './components/Door/Door';
 import Window from './components/Window/Window';
-import Selector from './components/Selector/Selector';
+import Forms from './components/Forms/Forms';
 
 function App() {
 
