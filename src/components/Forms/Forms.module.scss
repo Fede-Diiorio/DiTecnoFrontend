@@ -28,7 +28,7 @@
             label {
                 font-weight: bold;
                 font-size: 1rem;
-                width: 7rem;
+                width: 15rem;
             }
 
             input {
@@ -55,7 +55,6 @@
         min-width: 7rem;
         text-decoration: none;
         transition: all .3s ease-in-out;
-
 
         &:hover {
             background-color: $primaryColor;

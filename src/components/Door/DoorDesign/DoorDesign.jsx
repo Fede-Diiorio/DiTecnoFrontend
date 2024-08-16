@@ -5,11 +5,11 @@ import Button from "../../Button/Button";
 import { useParams } from "react-router-dom";
 
 const DoorDesign = () => {
-    const { opening, type, color } = useParams();
+    const { opening, type } = useParams();
     const [design, setDesign] = useState([]);
 
     useEffect(() => {
-        getDoorsDesigns(opening, type, color).then(data => {
+        getDoorsDesigns(opening, type).then(data => {
             setDesign(data);
         });
     }, []);

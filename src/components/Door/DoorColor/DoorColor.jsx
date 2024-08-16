@@ -5,11 +5,11 @@ import Button from "../../Button/Button";
 import { useParams } from "react-router-dom";
 
 const DoorColor = () => {
-    const { opening, type } = useParams();
+    const { opening, type, design } = useParams();
     const [colors, setColors] = useState([]);
 
     useEffect(() => {
-        getDoorsColors(opening, type).then(data => {
+        getDoorsColors(opening, type, design).then(data => {
             setColors(data);
         });
     }, []);

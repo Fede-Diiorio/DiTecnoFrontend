@@ -13,8 +13,8 @@ const Door = () => {
                 <Routes>
                     <Route path='/' element={<DoorOpening />} />
                     <Route path='/:opening' element={<DoorType />} />
-                    <Route path='/:opening/:type' element={<DoorColor />} />
-                    <Route path='/:opening/:type/:color' element={<DoorDesign />} />
+                    <Route path='/:opening/:type/' element={<DoorDesign />} />
+                    <Route path='/:opening/:type/:design' element={<DoorColor />} />
                     <Route path='/:opening/:type/:color/:design' element={<Forms />} />
                 </Routes>
             </div>

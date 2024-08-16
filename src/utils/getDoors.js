@@ -16,7 +16,7 @@ export const getDoorsType = (opening) => {
         });
 };
 
-export const getDoorsColors = (opening, type) => {
+export const getDoorsDesigns = (opening, type) => {
     return fetch(`http://localhost:8080/api/puerta/${opening}/${type}`)
         .then(response => response.json())
         .catch(error => {
@@ -25,8 +25,8 @@ export const getDoorsColors = (opening, type) => {
         });
 };
 
-export const getDoorsDesigns = (opening, type, color) => {
-    return fetch(`http://localhost:8080/api/puerta/${opening}/${type}/${color}`)
+export const getDoorsColors = (opening, type, design) => {
+    return fetch(`http://localhost:8080/api/puerta/${opening}/${type}/${design}`)
         .then(response => response.json())
         .catch(error => {
             console.error('Error en el fetch: ', error);
