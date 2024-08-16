@@ -16,7 +16,7 @@ const WindowType = () => {
 
     return (
         <>
-            <Selector title={'Tipo de abertuna'} description={'Seleccione el tipo de abertura que sea de su preferencia.'} returnUrl={`/ventana/${opening}`}>
+            <Selector title={'Tipo de abertuna'} description={'Seleccione el tipo de abertura que sea de su preferencia.'}>
                 <ul className='optionButtonflex'>
                     {colors.map(product => (
                         <li key={product.id}>

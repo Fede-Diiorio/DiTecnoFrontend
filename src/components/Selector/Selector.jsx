@@ -1,9 +1,9 @@
 import classes from './Selector.module.scss';
 import { TiArrowBack } from "react-icons/ti";
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-
-const Selector = ({ title, description, children, returnUrl }) => {
+const Selector = ({ title, description, children }) => {
+    const navigate = useNavigate();
 
     return (
         <section className={classes.heroImage}>
@@ -14,7 +14,9 @@ const Selector = ({ title, description, children, returnUrl }) => {
                         <p>{description}</p>
                         {children}
                     </div>
-                    <Link to={returnUrl}><TiArrowBack className={classes.backArrow} /></Link>
+                    <button onClick={() => navigate(-1)} className={classes.backButton}>
+                        <TiArrowBack className={classes.backArrow} />
+                    </button>
                 </div>
             </div>
         </section>

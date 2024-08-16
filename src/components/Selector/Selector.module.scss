@@ -34,17 +34,23 @@
                 }
             }
 
-            .backArrow {
-                margin-top: 7%;
-                font-size: 3rem;
-                color: $white;
-                transition: all .3s ease-in-out;
+            .backButton {
+                background-color: transparent;
+                border: none;
 
-                &:hover {
-                    scale: 1.1;
-                    color: $lightPrimaryColor;
+                .backArrow {
+                    margin-top: 7%;
+                    font-size: 3rem;
+                    color: $white;
+                    transition: all .3s ease-in-out;
+
+                    &:hover {
+                        scale: 1.1;
+                        color: $lightPrimaryColor;
+                    }
                 }
             }
+
         }
     }
 }

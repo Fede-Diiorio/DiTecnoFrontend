@@ -16,7 +16,7 @@ const DoorDesign = () => {
 
     return (
         <>
-            <Selector title={'Diseño de puerta'} description={'Seleccione un diseño de puerta que sea de su gusto.'} returnUrl={`/puerta/${opening}/${type}`}>
+            <Selector title={'Diseño de puerta'} description={'Seleccione un diseño de puerta que sea de su gusto.'}>
                 <ul className='optionButtonflex'>
                     {design.map(product => (
                         <li key={product.id}>

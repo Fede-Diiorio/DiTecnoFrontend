@@ -1,15 +1,9 @@
 import Selector from "../../Selector/Selector";
 import classes from './DobleForm.module.scss';
-import { useParams } from "react-router-dom";
 
-const DobleForm = ({ product }) => {
-
-    const { opening, style, type, color } = useParams();
-
-    const url = product === 'puerta' ? `/${product}/${opening}/${type}/${color}` : `/${product}/${opening}/${style}/${type}`;
-
+const DobleForm = () => {
     return (
-        <Selector title={'Finalizar producto'} description={'Complete con los datos solicitados para terminar de procesar su solicitud.'} returnUrl={url}>
+        <Selector title={'Finalizar producto'} description={'Complete con los datos solicitados para terminar de procesar su solicitud.'}>
             <form action="" className={classes.form}>
                 <legend>Complete todos los campos para terminar de cargar su producto</legend>
 

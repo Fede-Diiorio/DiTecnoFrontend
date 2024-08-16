@@ -16,7 +16,7 @@ const WindowColor = () => {
 
     return (
         <>
-            <Selector title={'Color para su ventana'} description={'Seleccione el color que mejor se adapte a sus necesidades.'} returnUrl={`/ventana/${opening}/${style}`}>
+            <Selector title={'Color para su ventana'} description={'Seleccione el color que mejor se adapte a sus necesidades.'}>
                 <ul className='optionButtonflex'>
                     {colors.map(product => (
                         <li key={product.id}>

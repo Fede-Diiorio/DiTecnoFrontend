@@ -16,7 +16,7 @@ const DoorColor = () => {
 
     return (
         <>
-            <Selector title={'Color para su puerta'} description={'Seleccione el color que mejor se adapte a sus necesidades.'} returnUrl={`/puerta/${opening}`}>
+            <Selector title={'Color para su puerta'} description={'Seleccione el color que mejor se adapte a sus necesidades.'}>
                 <ul className='optionButtonflex'>
                     {colors.map(product => (
                         <li key={product.id}>

@@ -17,7 +17,7 @@ const WindowStyle = () => {
 
     return (
         <>
-            <Selector title={'Estilo de apertura'} description={'Seleccione el estilo que desea para su apertura.'} returnUrl={'/ventana'}>
+            <Selector title={'Estilo de apertura'} description={'Seleccione el estilo que desea para su apertura.'}>
                 <ul className='optionButtonflex'>
                     {styles.map(product => (
                         <li key={product.id}>
