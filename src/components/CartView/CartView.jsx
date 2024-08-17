@@ -3,6 +3,7 @@ import { useLocalStorage } from "../../context/LocalStorageContext";
 import classes from './CartView.module.scss';
 import Button from '../Button/Button'
 import Selector from '../Selector/Selector';
+import CartIdem from "../CartItem/CartItem";
 
 const CartView = () => {
     const { cart, clearCart, totalQuantity } = useCart();
@@ -18,8 +19,18 @@ const CartView = () => {
             <Selector title={'No tiene productos agregados'}>
                 <Button to={'/producto'}>Agregar un producto</Button>
             </Selector>
-        )
+        );
     };
+
+    return (
+        <Selector title={'Productos agregados'}>
+            {cart.map(prod => <CartIdem key={prod.id} {...prod} />)}
+            <div className={classes.nav}>
+                <Button onClick={handlerClearCart} className={classes.button}>Vaciar Carrito</Button>
+                <Button to={'/checkout'}>checkout</Button>
+            </div>
+        </Selector>
+    );
 };
 
 export default CartView;
