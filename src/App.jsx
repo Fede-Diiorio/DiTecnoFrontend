@@ -7,22 +7,24 @@ import Product from './components/Product/Product'
 import ScrollToTop from './utils/ScrollToTop';
 import Door from './components/Door/Door';
 import Window from './components/Window/Window';
-import Forms from './components/Forms/Forms';
+import { LocalStorageProvider } from './context/LocalStorageContext';
 
 function App() {
 
   return (
     <main>
       <BrowserRouter>
-        <ScrollToTop />
-        <Header />
-        <Routes>
-          <Route path='/' element={<IndexBody />} />
-          <Route path='/producto' element={<Product />} />
-          <Route path='/puerta/*' element={<Door />} />
-          <Route path='/ventana/*' element={<Window />} />
-        </Routes>
-        <Footer />
+        <LocalStorageProvider>
+          <ScrollToTop />
+          <Header />
+          <Routes>
+            <Route path='/' element={<IndexBody />} />
+            <Route path='/producto' element={<Product />} />
+            <Route path='/puerta/*' element={<Door />} />
+            <Route path='/ventana/*' element={<Window />} />
+          </Routes>
+          <Footer />
+        </LocalStorageProvider>
       </BrowserRouter>
     </main>
   );
