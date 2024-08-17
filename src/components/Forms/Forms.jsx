@@ -8,6 +8,7 @@ import { useCart } from "../../context/CartContext";
 const Forms = ({ product }) => {
 
     const { saveCartToLocalStorage } = useLocalStorage();
+    const { addItem } = useCart();
     const { opening, type, design, color } = useParams();
     const [formData, setFormData] = useState();
     const navigate = useNavigate();
@@ -36,6 +37,7 @@ const Forms = ({ product }) => {
         };
 
         saveCartToLocalStorage(productData);
+        addItem(productData);
         navigate('/');
     };
 

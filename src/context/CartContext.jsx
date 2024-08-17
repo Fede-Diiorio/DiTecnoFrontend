@@ -19,16 +19,20 @@ export const CartProvider = ({ children }) => {
     }, []);
 
     const addItem = (productToAdd) => {
-        if (!isInCart(productToAdd.id)) {
-            setCart(prev => [...prev, productToAdd]);
-            showNotification('success', 'Agregado correctamente.');
+
+        const productWithId = {
+            ...productToAdd,
+            id: cart.length
+        };
+
+        if (!isInCart(productWithId.id)) {
+            setCart(prev => [...prev, productWithId]);
         } else {
             const cartUpdate = cart.map(prod => {
-                if (prod.id === productToAdd.id) {
-                    showNotification('success', 'Cantidad actualizada');
+                if (prod.id === productWithId.id) {
                     return {
                         ...prod,
-                        quantity: productToAdd.quantity,
+                        quantity: productWithId.quantity,
                     }
                 } else {
                     return prod;

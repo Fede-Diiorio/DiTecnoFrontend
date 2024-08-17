@@ -1,0 +1,25 @@
+.cart {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+
+    &:hover {
+
+        .icon,
+        p {
+            scale: 1.1;
+        }
+    }
+
+    .icon {
+        color: $white;
+        font-size: 2.5rem;
+        transition: all .3s ease-in-out;
+    }
+
+    p {
+        margin: 0;
+        color: $white;
+        transition: all .3s ease-in-out;
+    }
+}
