@@ -15,9 +15,9 @@ const CartItem = ({ product, type, quantity, id }) => {
 
     return (
         <div className={classes.container}>
-            <p><strong>Producto: </strong>{product}</p>
-            <p><strong>Descripción: </strong>{type}</p>
-            <p><strong>Cantidad: </strong>{quantity}</p>
+            <p className={classes.paragraph}><strong>Producto: </strong>{product}</p>
+            <p className={classes.paragraph}><strong>Descripción: </strong>{type}</p>
+            <p className={classes.paragraph}><strong>Cantidad: </strong>{quantity}</p>
             <button onClick={deleteItem}><FaTrashCan className={classes.icon} /></button>
         </div>
     );

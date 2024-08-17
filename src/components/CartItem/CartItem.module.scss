@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $primaryColor;
+    background-color: $white;
+    margin: 2rem 0;
+    padding: 0 3rem;
+    border-radius: 1rem;
+
+    .paragraph {
+        margin: .25rem .5rem !important;
+        color: $black !important;
+
+        strong {
+            color: $black;
+            font-size: 1.1rem;
+        }
+    }
+
+    button {
+        border: none;
+        background-color: transparent;
+
+        .icon {
+            font-size: 1.5rem;
+            color: $red;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                color: $darkRed;
+                scale: 1.1;
+            }
+        }
+    }
+}

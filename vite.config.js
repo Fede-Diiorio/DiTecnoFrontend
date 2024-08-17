@@ -20,6 +20,8 @@ export default defineConfig({
         $black: #000000;
         $grey: #97989A;
         $darkGrey: #3d3d3d;
+        $red: #d61d16;
+        $darkRed: #8a130f;
         `
       }
     }
