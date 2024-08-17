@@ -19,17 +19,23 @@
             }
         }
 
-        .headerIcon {
-            color: $white;
-            font-size: 2.5rem;
-            transition: all .3s ease-in-out;
-            max-width: 24rem;
+        .icons {
+            display: flex;
+            gap: 1rem;
 
-            &:hover {
-                cursor: pointer;
-                scale: 1.1;
+            .icon {
+                color: $white;
+                font-size: 2.5rem;
+                transition: all .3s ease-in-out;
+                max-width: 24rem;
+
+                &:hover {
+                    cursor: pointer;
+                    scale: 1.1;
+                }
             }
         }
+
     }
 }
 

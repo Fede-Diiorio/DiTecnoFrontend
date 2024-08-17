@@ -35,7 +35,7 @@ export const LocalStorageProvider = ({ children }) => {
 
     return (
         <LocalStorageContext.Provider value={{ saveCartToLocalStorage, getCartFromLocalStorage, removeProductFromLocalStorage, clearCartFromLocalStorage }}>
-            {children};
+            {children}
         </LocalStorageContext.Provider>
     );
 

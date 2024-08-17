@@ -1,14 +1,16 @@
 import Selector from "../Selector/Selector";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import classes from './Forms.module.scss';
 import { useLocalStorage } from "../../context/LocalStorageContext";
+import { useCart } from "../../context/CartContext";
 
 const Forms = ({ product }) => {
 
     const { saveCartToLocalStorage } = useLocalStorage();
     const { opening, type, design, color } = useParams();
     const [formData, setFormData] = useState();
+    const navigate = useNavigate();
 
     // Manejar el cambio en los inputs
     const handleInputChange = (e) => {
@@ -34,6 +36,7 @@ const Forms = ({ product }) => {
         };
 
         saveCartToLocalStorage(productData);
+        navigate('/');
     };
 
     if (type !== 'simple') {
