@@ -55,6 +55,7 @@ export const CartProvider = ({ children }) => {
         let accu = 0;
 
         cart.forEach(prod => {
+            console.log("Porducto:", prod)
             accu += prod.quantity;
         });
 

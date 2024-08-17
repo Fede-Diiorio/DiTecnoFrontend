@@ -16,9 +16,11 @@ const Forms = ({ product }) => {
     // Manejar el cambio en los inputs
     const handleInputChange = (e) => {
         const { name, value } = e.target;
+        const parsedValue = parseFloat(value);
+
         setFormData(prevState => ({
             ...prevState,
-            [name]: value
+            [name]: parsedValue
         }));
     };
 
@@ -51,27 +53,27 @@ const Forms = ({ product }) => {
 
                         <div className={classes.field}>
                             <label>Ancho de la hoja fija(cm): </label>
-                            <input type="number" placeholder="Ancho" min={20} name='fixedWidth' />
+                            <input type="number" placeholder="Ancho" min={20} name='fixedWidth' onChange={handleInputChange} />
                         </div>
 
                         <div className={classes.field}>
                             <label>Alto de la hoja fija(cm): </label>
-                            <input type="number" placeholder="Alto" min={20} name='fixedHeight' />
+                            <input type="number" placeholder="Alto" min={20} name='fixedHeight' onChange={handleInputChange} />
                         </div>
 
                         <div className={classes.field}>
                             <label>Ancho de la hoja móvil(cm): </label>
-                            <input type="number" placeholder="Ancho" min={20} name='width' />
+                            <input type="number" placeholder="Ancho" min={20} name='width' onChange={handleInputChange} />
                         </div>
 
                         <div className={classes.field}>
                             <label>Alto de la hoja móvil(cm): </label>
-                            <input type="number" placeholder="Alto" min={20} name='height' />
+                            <input type="number" placeholder="Alto" min={20} name='height' onChange={handleInputChange} />
                         </div>
 
                         <div className={classes.field}>
                             <label>Cantidad: </label>
-                            <input type="number" placeholder="Cantitdad" min={1} name='quantity' />
+                            <input type="number" placeholder="Cantitdad" min={1} name='quantity' onChange={handleInputChange} />
                         </div>
 
                     </div>
@@ -101,7 +103,7 @@ const Forms = ({ product }) => {
 
                         <div className={classes.field}>
                             <label>Cantidad: </label>
-                            <input type="number" placeholder="Cantitdad" min={1} name='quatity' onChange={handleInputChange} />
+                            <input type="number" placeholder="Cantitdad" min={1} name='quantity' onChange={handleInputChange} />
                         </div>
 
                     </div>
