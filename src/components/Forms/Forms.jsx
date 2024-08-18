@@ -38,7 +38,6 @@ const Forms = ({ product }) => {
             ...formData
         };
 
-        saveCartToLocalStorage(productData);
         addItem(productData);
         navigate('/');
     };
@@ -93,7 +92,7 @@ const Forms = ({ product }) => {
 
                         <div className={classes.field}>
                             <label>Ancho (cm): </label>
-                            <input type="number" placeholder="Ancho" min={20} name='wight' onChange={handleInputChange} />
+                            <input type="number" placeholder="Ancho" min={20} name='width' onChange={handleInputChange} />
                         </div>
 
                         <div className={classes.field}>

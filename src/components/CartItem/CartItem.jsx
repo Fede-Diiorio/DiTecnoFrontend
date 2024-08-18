@@ -9,8 +9,8 @@ const CartItem = ({ product, type, quantity, id }) => {
     const { removeProductFromLocalStorage } = useLocalStorage();
 
     const deleteItem = () => {
-        removeItem(id);
         removeProductFromLocalStorage(id);
+        removeItem(id);
     }
 
     return (

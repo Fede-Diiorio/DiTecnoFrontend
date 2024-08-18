@@ -11,7 +11,7 @@ const CartContext = createContext({
 
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
-    const { getCartFromLocalStorage } = useLocalStorage();
+    const { getCartFromLocalStorage, saveCartToLocalStorage } = useLocalStorage();
 
     useEffect(() => {
         const cartFromLocalStorage = getCartFromLocalStorage();
@@ -20,12 +20,20 @@ export const CartProvider = ({ children }) => {
 
     const addItem = (productToAdd) => {
 
+        let id;
+
+        if (productToAdd.product === 'puerta') {
+            id = `${productToAdd.product}-${productToAdd.opening}-${productToAdd.type}-${productToAdd.design}-${productToAdd.color}-${productToAdd.width}-${productToAdd.height}`;
+        } else {
+            id = `${productToAdd.product}-${productToAdd.opening}-${productToAdd.style}-${productToAdd.type}-${productToAdd.color}-${productToAdd.width}-${productToAdd.height}`
+        }
+
         const productWithId = {
             ...productToAdd,
-            id: cart.length
+            id
         };
 
-        if (!isInCart(productWithId.id)) {
+        if (!isInCart(id)) {
             setCart(prev => [...prev, productWithId]);
         } else {
             const cartUpdate = cart.map(prod => {
@@ -40,6 +48,7 @@ export const CartProvider = ({ children }) => {
             });
             setCart(cartUpdate);
         };
+        saveCartToLocalStorage(productWithId);
     };
 
     const isInCart = (id) => {
@@ -55,7 +64,6 @@ export const CartProvider = ({ children }) => {
         let accu = 0;
 
         cart.forEach(prod => {
-            console.log("Porducto:", prod)
             accu += prod.quantity;
         });
 
