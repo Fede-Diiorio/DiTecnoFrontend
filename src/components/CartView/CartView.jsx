@@ -24,7 +24,9 @@ const CartView = () => {
 
     return (
         <Selector title={'Productos agregados'}>
-            {cart.map(prod => <CartItem key={prod.id} {...prod} />)}
+            <div className={classes.items}>
+                {cart.map(prod => <CartItem key={prod.id} {...prod} />)}
+            </div>
             <div className={classes.nav}>
                 <Button onClick={handlerClearCart}>Vaciar carrito</Button>
                 <Button to={'/checkout'}>Checkout</Button>

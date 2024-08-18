@@ -16,13 +16,15 @@ const CartItem = ({ product, type, quantity, id, style, color, design, opening }
     if (product === 'puerta') {
         return (
             <div className={classes.container}>
-                <p className={classes.paragraph}><strong>Producto: </strong>{product}</p>
-                <p className={classes.paragraph}><strong>Sentido de apertura: </strong>{opening}</p>
-                <p className={classes.paragraph}><strong>Descripción: </strong>{type}</p>
-                <p className={classes.paragraph}><strong>Diseño: </strong>{design}</p>
-                <p className={classes.paragraph}><strong>Color: </strong>{color}</p>
-                <p className={classes.paragraph}><strong>Cantidad: </strong>{quantity}</p>
-                <button onClick={deleteItem}><FaTrashCan className={classes.icon} /></button>
+                <h5>{product}</h5>
+                <div>
+                    <p className={classes.paragraph}><strong>Sentido de apertura: </strong>{opening}</p>
+                    <p className={classes.paragraph}><strong>Descripción: </strong>{type}</p>
+                    <p className={classes.paragraph}><strong>Diseño: </strong>{design}</p>
+                    <p className={classes.paragraph}><strong>Color: </strong>{color}</p>
+                    <p className={classes.paragraph}><strong>Cantidad: </strong>{quantity}</p>
+                </div>
+                <button onClick={deleteItem}>Eliminar</button>
             </div>
         );
     };
@@ -30,13 +32,15 @@ const CartItem = ({ product, type, quantity, id, style, color, design, opening }
     if (product === 'ventana') {
         return (
             <div className={classes.container}>
-                <p className={classes.paragraph}><strong>Producto: </strong>{product}</p>
-                <p className={classes.paragraph}><strong>Sentido de apertura: </strong>{opening}</p>
-                <p className={classes.paragraph}><strong>Estilo de apertura: </strong>{style}</p>
-                <p className={classes.paragraph}><strong>Descripción: </strong>{type}</p>
-                <p className={classes.paragraph}><strong>Cantidad: </strong>{color}</p>
-                <p className={classes.paragraph}><strong>Cantidad: </strong>{quantity}</p>
-                <button onClick={deleteItem}><FaTrashCan className={classes.icon} /></button>
+                <h5>{product}</h5>
+                <div>
+                    <p className={classes.paragraph}><strong>Sentido de apertura: </strong>{opening}</p>
+                    <p className={classes.paragraph}><strong>Estilo de apertura: </strong>{style}</p>
+                    <p className={classes.paragraph}><strong>Descripción: </strong>{type}</p>
+                    <p className={classes.paragraph}><strong>Color: </strong>{color}</p>
+                    <p className={classes.paragraph}><strong>Cantidad: </strong>{quantity}</p>
+                </div>
+                <button onClick={deleteItem}>Eliminar</button>
             </div>
         );
     };

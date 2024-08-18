@@ -3,7 +3,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 85vh;
+    min-height: 85vh;
+    height: auto;
     position: relative;
     border-bottom: 2px solid $lightPrimaryColor;
 
