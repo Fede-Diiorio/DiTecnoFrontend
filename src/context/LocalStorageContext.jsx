@@ -10,11 +10,9 @@ const LocalStorageContext = createContext({
 export const LocalStorageProvider = ({ children }) => {
 
     const saveCartToLocalStorage = (saveProduct) => {
-
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         cart.push(saveProduct);
         localStorage.setItem('cart', JSON.stringify(cart));
-
     };
 
     const getCartFromLocalStorage = () => {

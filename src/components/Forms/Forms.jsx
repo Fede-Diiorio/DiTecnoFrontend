@@ -9,7 +9,7 @@ const Forms = ({ product }) => {
 
     const { saveCartToLocalStorage } = useLocalStorage();
     const { addItem } = useCart();
-    const { opening, type, design, color } = useParams();
+    const { opening, type, design, color, style } = useParams();
     const [formData, setFormData] = useState();
     const navigate = useNavigate();
 
@@ -34,6 +34,7 @@ const Forms = ({ product }) => {
             opening,
             type,
             design,
+            style,
             color,
             ...formData
         };
