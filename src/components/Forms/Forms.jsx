@@ -52,27 +52,27 @@ const Forms = ({ product }) => {
 
                         <div className={classes.field}>
                             <label>Ancho de la hoja fija(cm): </label>
-                            <input type="number" placeholder="Ancho" min={20} name='fixedWidth' onChange={handleInputChange} />
+                            <input type="number" placeholder="Ancho" min={20} name='fixedWidth' required={true} onChange={handleInputChange} />
                         </div>
 
                         <div className={classes.field}>
                             <label>Alto de la hoja fija(cm): </label>
-                            <input type="number" placeholder="Alto" min={20} name='fixedHeight' onChange={handleInputChange} />
+                            <input type="number" placeholder="Alto" min={20} name='fixedHeight' required={true} onChange={handleInputChange} />
                         </div>
 
                         <div className={classes.field}>
                             <label>Ancho de la hoja móvil(cm): </label>
-                            <input type="number" placeholder="Ancho" min={20} name='width' onChange={handleInputChange} />
+                            <input type="number" placeholder="Ancho" min={20} name='width' required={true} onChange={handleInputChange} />
                         </div>
 
                         <div className={classes.field}>
                             <label>Alto de la hoja móvil(cm): </label>
-                            <input type="number" placeholder="Alto" min={20} name='height' onChange={handleInputChange} />
+                            <input type="number" placeholder="Alto" min={20} name='height' required={true} onChange={handleInputChange} />
                         </div>
 
                         <div className={classes.field}>
                             <label>Cantidad: </label>
-                            <input type="number" placeholder="Cantitdad" min={1} name='quantity' onChange={handleInputChange} />
+                            <input type="number" placeholder="Cantitdad" min={1} name='quantity' required={true} onChange={handleInputChange} />
                         </div>
 
                     </div>
@@ -92,17 +92,17 @@ const Forms = ({ product }) => {
 
                         <div className={classes.field}>
                             <label>Ancho (cm): </label>
-                            <input type="number" placeholder="Ancho" min={20} name='width' onChange={handleInputChange} />
+                            <input type="number" placeholder="Ancho" min={20} name='width' required={true} onChange={handleInputChange} />
                         </div>
 
                         <div className={classes.field}>
                             <label>Alto (cm): </label>
-                            <input type="number" placeholder="Alto" min={20} name='height' onChange={handleInputChange} />
+                            <input type="number" placeholder="Alto" min={20} name='height' required={true} onChange={handleInputChange} />
                         </div>
 
                         <div className={classes.field}>
                             <label>Cantidad: </label>
-                            <input type="number" placeholder="Cantitdad" min={1} name='quantity' onChange={handleInputChange} />
+                            <input type="number" placeholder="Cantitdad" min={1} name='quantity' required={true} onChange={handleInputChange} />
                         </div>
 
                     </div>
