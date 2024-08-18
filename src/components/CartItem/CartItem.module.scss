@@ -1,10 +1,11 @@
 .container {
+    width: 50vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border: 1px solid $primaryColor;
     background-color: $white;
-    margin: 2rem 0;
+    margin: .5rem 0;
     padding: 0 3rem;
     border-radius: 1rem;
 
