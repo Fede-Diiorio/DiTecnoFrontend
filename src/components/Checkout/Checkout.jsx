@@ -33,7 +33,7 @@ const Checkout = () => {
 
             if (response.ok) {
                 console.log('Orden enviada con éxito');
-                navigate('/');
+                // navigate('/');
             } else {
                 console.error('Error al enviar la orden');
             }
