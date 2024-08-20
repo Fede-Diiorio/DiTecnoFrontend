@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    img {
+        width: 50%;
+        border: 2px solid $lightPrimaryColor;
+        border-radius: .5rem;
+    }
+}
+
+@media(max-width: 992px) {
+    .container {
+        img {
+            display: none;
+        }
+    }
+}

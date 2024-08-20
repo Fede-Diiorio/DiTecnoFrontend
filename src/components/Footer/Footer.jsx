@@ -14,8 +14,8 @@ const Footer = () => {
                         <div className={classes.infoColumn}>
                             <h4>Compañia</h4>
                             <ul>
-                                <li><Link className={classes.infoLi}>Sobre Nosotros</Link></li>
-                                <li><Link className={classes.infoLi}>Nuestros Productos</Link></li>
+                                <li><Link className={classes.infoLi} to={'/nosotros'}>Sobre Nosotros</Link></li>
+                                <li><Link className={classes.infoLi} to={'/galeria'}>Galeria</Link></li>
                             </ul>
                         </div>
 

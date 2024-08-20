@@ -11,6 +11,8 @@ import Door from './components/Door/Door';
 import Window from './components/Window/Window';
 import CartView from './components/CartView/CartView';
 import Checkout from './components/Checkout/Checkout';
+import AboutUs from './components/AboutUs/AboutUs';
+import Galery from './components/Galery/Galery';
 
 function App() {
 
@@ -28,6 +30,8 @@ function App() {
               <Route path='/ventana/*' element={<Window />} />
               <Route path='/cart' element={<CartView />} />
               <Route path='/checkout' element={<Checkout />} />
+              <Route path='/nosotros' element={<AboutUs />} />
+              <Route path='/galeria' element={<Galery />} />
             </Routes>
             <Footer />
           </CartProvider>

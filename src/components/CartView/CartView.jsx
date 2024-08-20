@@ -29,7 +29,7 @@ const CartView = () => {
             </div>
             <div className={classes.nav}>
                 <Button onClick={handlerClearCart}>Vaciar carrito</Button>
-                <Button to={'/checkout'}>Checkout</Button>
+                <Button to={'/checkout'}>Finalizar pedido</Button>
             </div>
         </Selector>
     );

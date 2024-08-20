@@ -21,7 +21,6 @@
             padding: 0 2rem;
             margin-bottom: .5rem;
             font-size: 1.4rem;
-            align-items: flex-start;
             align-items: center;
             gap: 0;
 
@@ -35,7 +34,7 @@
                 width: 100%;
                 border-radius: 1rem;
                 border: 1px solid $primaryColor;
-                padding: .6rem;
+                padding: .6rem 0;
 
                 &::placeholder {
                     padding-left: .5rem;
@@ -62,6 +61,22 @@
             border: 2px solid $secondaryColor;
             cursor: pointer;
             scale: 1.1;
+        }
+    }
+}
+
+@media(max-width: 992px) {
+    .form {
+        .container {
+            .field {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: .5rem;
+
+                label {
+                    text-align: left;
+                }
+            }
         }
     }
 }
