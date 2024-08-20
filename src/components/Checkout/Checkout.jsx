@@ -1,45 +1,19 @@
 import Selector from '../Selector/Selector';
 import classes from './Checkout.module.scss';
-import { useCart } from '../../context/CartContext';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useGenerateOrder } from '../../utils/generateOrder';
 
 const Checkout = () => {
+
+    const generateOrder = useGenerateOrder();
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
-    const { cart } = useCart();
-    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        const orderData = {
-            name,
-            email,
-            phone,
-            cart
-        };
-
-        try {
-            const response = await fetch('http://localhost:8080/api/orden', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(orderData),
-            });
-
-            if (response.ok) {
-                console.log('Orden enviada con éxito');
-                // navigate('/');
-            } else {
-                console.error('Error al enviar la orden');
-            }
-        } catch (error) {
-            console.error('Hubo un problema al enviar la orden:', error);
-        }
+        generateOrder(name, email, phone);
     };
 
     return (

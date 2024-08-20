@@ -4,7 +4,7 @@ const LocalStorageContext = createContext({
     saveCartToLocalStorage: () => { },
     getCartFromLocalStorage: () => { },
     removeProductFromLocalStorage: () => { },
-    clearCartFormLocalStorage: () => { }
+    clearCartFromLocalStorage: () => { }
 });
 
 export const LocalStorageProvider = ({ children }) => {
