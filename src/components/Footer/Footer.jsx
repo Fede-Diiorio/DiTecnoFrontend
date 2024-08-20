@@ -33,7 +33,7 @@ const Footer = () => {
                                 <li><a href="https://www.facebook.com/ditecnoaberturas/" target="_blank" className={classes.infoIcon}><FaSquareFacebook className={classes.icon} /></a></li>
                                 <li><a href="https://www.linkedin.com/in/roberto-di-iorio-b976a726/?originalSubdomain=ar" target='_blank' className={classes.infoIcon}><FaLinkedin className={classes.icon} /></a></li>
                                 <li><a href="https://www.google.com/maps/search/?api=1&query=Jaime+Fernandez+Speroni+713,+V9420+R%C3%ADo+Grande,+Tierra+del+Fuego" target='_blank' className={classes.infoIcon}><FaLocationDot className={classes.icon} /></a></li>
-                                <li><a href="https://wa.me/0296415611286" target='_blank' className={classes.infoIcon}><FaWhatsapp className={classes.icon} /></a></li>
+
                             </ul>
                         </div>
                     </div>

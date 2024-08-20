@@ -18,7 +18,7 @@
     .container {
         .field {
             display: flex;
-            padding: 0 2rem;
+            padding: 0 1rem 0 0;
             margin-bottom: .5rem;
             font-size: 1.4rem;
             align-items: center;
@@ -34,7 +34,7 @@
                 width: 100%;
                 border-radius: 1rem;
                 border: 1px solid $primaryColor;
-                padding: .6rem 0;
+                padding: .5rem;
 
                 &::placeholder {
                     padding-left: .5rem;
