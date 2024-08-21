@@ -3,6 +3,7 @@ import { getWindowsStyle } from "../../../utils/getWindows";
 import { useEffect, useState } from "react";
 import Button from "../../Button/Button";
 import { useParams } from "react-router-dom";
+import classes from './WindowStyle.module.scss';
 
 const WindowStyle = () => {
 
@@ -21,6 +22,7 @@ const WindowStyle = () => {
                 <ul className='optionButtonflex'>
                     {styles.map(product => (
                         <li key={product.id}>
+                            <img src={product.image} alt={product.name} className={classes.image} />
                             <Button to={product.slug}>{product.name}</Button>
                         </li>
                     ))}
