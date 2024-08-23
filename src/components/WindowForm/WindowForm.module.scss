@@ -1,0 +1,90 @@
+.form {
+    padding: 2rem;
+    border: 2px solid $lightPrimaryColor;
+    margin: 2rem auto;
+    width: 60%;
+    border-radius: 1rem;
+    box-shadow: 8px 15px 20px 0px $black;
+
+    .formContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 1rem;
+
+        .image {
+            height: 20rem;
+        }
+
+        .fields {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: stretch;
+
+            .field {
+                display: flex;
+                padding: 0 2rem;
+                margin-bottom: 1rem;
+                font-size: 1.4rem;
+                align-items: center;
+                gap: 2rem;
+
+                label {
+                    font-weight: bold;
+                    font-size: 1rem;
+                    min-width: 1rem;
+                }
+
+                input {
+                    width: 100%;
+                    border-radius: 1rem;
+                    border: 1px solid $primaryColor;
+                    padding: .6rem;
+
+                    &::placeholder {
+                        padding-left: .5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .colors {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 1rem;
+
+        li {
+            list-style: none;
+
+            .hiddenCheckbox {
+                display: none;
+
+                &:checked+label {
+                    border: 2px solid $primaryColor;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                }
+            }
+
+            .colorLabel {
+                cursor: pointer;
+                padding: 0.5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 2px solid transparent;
+                border-radius: 0.5rem;
+                transition: border-color 0.3s ease;
+
+                &:hover {
+                    border-color: $lightPrimaryColor;
+                }
+
+                .colorImage {
+                    max-width: 100%;
+                    border-radius: 0.25rem;
+                }
+            }
+        }
+    }
+}

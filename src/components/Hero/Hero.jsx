@@ -5,7 +5,7 @@ const Hero = () => {
     return (
         <section className={classes.heroImage}>
             <div className={classes.shadow}>
-                <div className={classes.container}>
+                <div className='container'>
                     <div className={classes.paramsOptions}>
                         <h1>DiTecno, aberturas de PVC</h1>
                         <h4>Asistente de presupuesto</h4>

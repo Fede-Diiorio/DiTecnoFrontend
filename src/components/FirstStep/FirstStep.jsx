@@ -6,7 +6,7 @@ const FirstStep = () => {
     return (
         <section className={classes.section} id='firstStep'>
             <div className={classes.frame}>
-                <div className={classes.container}>
+                <div className={`container ${classes.container}`}>
                     <h2>Elige tu puerta y ventana ideal</h2>
                     <p>Cinco simples pasos para encontrar la solución adecuada a tus necesidades.</p>
                     <div className={classes.cards}>

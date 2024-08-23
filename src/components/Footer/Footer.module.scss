@@ -2,53 +2,48 @@
     background-color: $darkGrey;
     padding: 2rem 0;
 
-    .container {
-        max-width: 70vw;
-        margin: 0 auto;
+    .info {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
 
-        .info {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+        .infoLogo {
+            width: 12rem;
+        }
 
-            .infoLogo {
-                width: 12rem;
+        .infoColumn {
+            h4 {
+                color: $lightPrimaryColor;
+                margin-bottom: 1rem;
             }
 
-            .infoColumn {
-                h4 {
-                    color: $lightPrimaryColor;
-                    margin-bottom: 1rem;
+            .icons {
+                display: flex;
+                gap: 1rem;
+            }
+
+            li {
+                transition: all .3s ease-in-out;
+                margin-bottom: .5rem;
+
+                &:hover {
+                    scale: 1.1;
                 }
 
-                .icons {
-                    display: flex;
-                    gap: 1rem;
+                .infoIcon {
+                    font-size: 1.5rem;
                 }
 
-                li {
+                .infoLi,
+                .infoIcon {
+                    color: $white;
                     transition: all .3s ease-in-out;
-                    margin-bottom: .5rem;
 
                     &:hover {
-                        scale: 1.1;
+                        color: $primaryColor;
                     }
-
-                    .infoIcon {
-                        font-size: 1.5rem;
-                    }
-
-                    .infoLi,
-                    .infoIcon {
-                        color: $white;
-                        transition: all .3s ease-in-out;
-
-                        &:hover {
-                            color: $primaryColor;
-                        }
-                    }
-
                 }
+
             }
         }
     }
@@ -56,18 +51,16 @@
 
 @media (max-width: 1200px) {
     .background {
-        .container {
-            .info {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 0 2rem;
+        .info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0 2rem;
 
-                .infoLogo,
-                .infoColumn {
-                    height: 100%;
-                    padding-left: 1rem;
-                    border-left: 1px solid $white;
-                }
+            .infoLogo,
+            .infoColumn {
+                height: 100%;
+                padding-left: 1rem;
+                border-left: 1px solid $white;
             }
         }
     }
@@ -75,15 +68,13 @@
 
 @media(max-width: 992px) {
     .background {
-        .container {
-            .info {
-                display: flex;
-                flex-direction: column;
+        .info {
+            display: flex;
+            flex-direction: column;
 
-                .infoLogo,
-                .infoColumn {
-                    border: none;
-                }
+            .infoLogo,
+            .infoColumn {
+                border: none;
             }
         }
     }

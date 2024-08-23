@@ -13,6 +13,7 @@ import CartView from './components/CartView/CartView';
 import Checkout from './components/Checkout/Checkout';
 import AboutUs from './components/AboutUs/AboutUs';
 import Galery from './components/Galery/Galery';
+import WindowForm from './components/WindowForm/WindowForm';
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
               <Route path='/checkout' element={<Checkout />} />
               <Route path='/nosotros' element={<AboutUs />} />
               <Route path='/galeria' element={<Galery />} />
+              <Route path='/form' element={<WindowForm />} />
             </Routes>
             <Footer />
           </CartProvider>

@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer id='footer'>
             <div className={classes.background}>
-                <div className={classes.container}>
+                <div className='container'>
                     <div className={classes.info}>
                         <Link to='/'><img className={classes.infoLogo} src={ditecnoLogo} alt="Logo de la Empresa" /></Link>
 

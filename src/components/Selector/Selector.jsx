@@ -8,7 +8,7 @@ const Selector = ({ title, description, children }) => {
     return (
         <section className={classes.heroImage}>
             <div className={classes.shadow}>
-                <div className={classes.container}>
+                <div className='container'>
                     <div className={classes.paramsOptions}>
                         <h2>{title}</h2>
                         <p>{description}</p>
