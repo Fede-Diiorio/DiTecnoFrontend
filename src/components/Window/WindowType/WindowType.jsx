@@ -18,7 +18,7 @@ const WindowType = () => {
     return (
         <>
             <Selector title={'Tipo de abertuna'} description={'Seleccione la configuración de abertura que sea de su preferencia.'}>
-                <ul className='optionButtonflex'>
+                <ul className={`optionButtonflex ${classes.ul}`}>
                     {colors.map(product => (
                         <li key={product.id} className={classes.li}>
                             <img src={product.image} alt={`Imagen de ventana con ${product.name}`} />

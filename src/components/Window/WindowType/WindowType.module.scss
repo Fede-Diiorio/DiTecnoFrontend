@@ -1,5 +1,10 @@
-.li {
-    img {
-        max-height: 15rem;
+.ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .li {
+        img {
+            height: 20rem;
+        }
     }
 }

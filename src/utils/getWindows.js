@@ -27,7 +27,7 @@ export const getWindowsTypes = (opening, style) => {
         });
 };
 
-export const getWindowsColors = (opening, style, type) => {
+export const getWindowImage = (opening, style, type) => {
     return fetch(`${apiUrl}/api/ventana/${opening}/${style}/${type}`)
         .then(response => response.json())
         .catch(error => {

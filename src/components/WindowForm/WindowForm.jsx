@@ -1,12 +1,23 @@
 import classes from './WindowForm.module.scss';
-import image from '../../assets/home.jpg';
 import Button from '../Button/Button';
 import { useEffect, useState } from 'react';
 import { getColors } from '../../utils/getColors';
+import { getWindowImage } from '../../utils/getWindows';
+import { useParams } from 'react-router-dom';
+import Selector from '../Selector/Selector';
 
 const WindowForm = () => {
 
+    const { opening, style, type } = useParams();
     const [colors, setColors] = useState([]);
+    const [image, setImage] = useState([]);
+
+    useEffect(() => {
+        getWindowImage(opening, style, type).then(data => {
+            console.log(data);
+            setImage(data);
+        });
+    }, []);
 
     useEffect(() => {
         getColors().then(data => {
@@ -15,32 +26,27 @@ const WindowForm = () => {
     }, []);
 
     return (
-        <section className='container'>
+        <Selector title={'Cargar producto'} description={'Complete el formulario para cargar el producto al pedido'}>
             <div className={classes.form}>
                 <div className={classes.formContainer}>
 
-                    <img src={image} alt="Test" className={classes.image} />
+                    <img src={image.image} alt={image.name} className={classes.image} />
 
                     <div className={classes.fields}>
 
                         <div className={classes.field}>
-                            <label>L: </label>
+                            <label>Ancho: </label>
                             <input type="number" min={20} required={true} name='width' />
                         </div>
 
                         <div className={classes.field}>
-                            <label>A: </label>
+                            <label>Alto: </label>
                             <input type="number" min={20} required={true} name='height' />
                         </div>
 
                         <div className={classes.field}>
-                            <label>A1: </label>
+                            <label>Medida de Hoja: </label>
                             <input type="number" min={20} required={true} name='height1' />
-                        </div>
-
-                        <div className={classes.field}>
-                            <label>A2: </label>
-                            <input type="number" min={20} required={true} name='height2' />
                         </div>
 
                         <div className={classes.field}>
@@ -74,7 +80,8 @@ const WindowForm = () => {
 
                 <Button>Cargar producto</Button>
             </div>
-        </section>
+        </Selector>
+
     );
 };
 
