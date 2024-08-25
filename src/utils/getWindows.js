@@ -29,7 +29,10 @@ export const getWindowsTypes = (opening, style) => {
 
 export const getWindowImage = (opening, style, type) => {
     return fetch(`${apiUrl}/api/ventana/${opening}/${style}/${type}`)
-        .then(response => response.json())
+        .then(response => {
+            console.log(response);
+            return response.json();
+        })
         .catch(error => {
             console.error('Error en el fetch: ', error);
             return [];

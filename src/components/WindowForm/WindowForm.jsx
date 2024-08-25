@@ -10,12 +10,11 @@ const WindowForm = () => {
 
     const { opening, style, type } = useParams();
     const [colors, setColors] = useState([]);
-    const [image, setImage] = useState([]);
+    const [typeSpecification, setTypeSpecification] = useState([]);
 
     useEffect(() => {
         getWindowImage(opening, style, type).then(data => {
-            console.log(data);
-            setImage(data);
+            setTypeSpecification(data);
         });
     }, []);
 
@@ -30,7 +29,7 @@ const WindowForm = () => {
             <div className={classes.form}>
                 <div className={classes.formContainer}>
 
-                    <img src={image.image} alt={image.name} className={classes.image} />
+                    <img src={typeSpecification.image} alt={typeSpecification.name} className={classes.image} />
 
                     <div className={classes.fields}>
 
