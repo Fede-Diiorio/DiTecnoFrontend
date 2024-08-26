@@ -1,5 +1,5 @@
 import Selector from "../Selector/Selector";
-import image from '../../assets/home.jpg';
+import image from '../../assets/home.webp';
 import classes from './AboutUs.module.scss';
 
 const AboutUs = () => {

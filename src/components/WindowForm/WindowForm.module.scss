@@ -52,6 +52,17 @@
         }
     }
 
+    .radios {
+        margin-bottom: 1rem;
+
+        .radio {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: .5rem;
+        }
+    }
+
     .colors {
         display: flex;
         gap: 2rem;
@@ -71,7 +82,6 @@
 
             .colorLabel {
                 cursor: pointer;
-                padding: 0.5rem;
                 display: flex;
                 flex-direction: column;
                 align-items: center;

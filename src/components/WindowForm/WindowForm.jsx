@@ -56,6 +56,21 @@ const WindowForm = () => {
                     </div>
                 </div>
 
+                <div className={classes.radios}>
+
+                    <div className={classes.radio}>
+                        <label htmlFor="dvhEstandar">Vidrio DVH estándar</label>
+                        <input type="radio" id="dvhEstandar" name="glassType" required />
+                    </div>
+
+                    <div className={classes.radio}>
+                        <label htmlFor="dvhLaminado">Vidrio DVH laminado</label>
+                        <input type="radio" id="dvhLaminado" name="glassType" />
+                    </div>
+
+                </div>
+
+
                 {/* Lista de colores como checkboxes */}
                 <ul className={classes.colors}>
                     {
@@ -67,6 +82,7 @@ const WindowForm = () => {
                                     name="color"
                                     value={color.slug}
                                     className={classes.hiddenCheckbox}
+                                    required
                                 />
                                 <label htmlFor={`color-${color.slug}`} className={classes.colorLabel}>
                                     <p>{color.name}</p>
