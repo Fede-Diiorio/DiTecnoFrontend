@@ -10,8 +10,8 @@ const Selector = ({ title, description, children }) => {
             <div className={classes.shadow}>
                 <div className='container'>
                     <div className={classes.paramsOptions}>
-                        <h2>{title}</h2>
-                        <p>{description}</p>
+                        <h2 className={classes.h2}>{title}</h2>
+                        <p className={classes.p}>{description}</p>
                         {children}
                     </div>
                     <button onClick={() => navigate(-1)} className={classes.backButton}>
