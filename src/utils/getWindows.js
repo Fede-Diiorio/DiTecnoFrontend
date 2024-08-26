@@ -27,7 +27,7 @@ export const getWindowsTypes = (opening, style) => {
         });
 };
 
-export const getWindowImage = (opening, style, type) => {
+export const getWindowSpecification = (opening, style, type) => {
     return fetch(`${apiUrl}/api/ventana/${opening}/${style}/${type}`)
         .then(response => {
             console.log(response);

@@ -2,9 +2,11 @@ import classes from './WindowForm.module.scss';
 import Button from '../Button/Button';
 import { useEffect, useState } from 'react';
 import { getColors } from '../../utils/getColors';
-import { getWindowImage } from '../../utils/getWindows';
+import { getWindowSpecification } from '../../utils/getWindows';
 import { useParams } from 'react-router-dom';
 import Selector from '../Selector/Selector';
+import TwoCasement from './FieldsType/TwoCasement';
+import OneCasement from './FieldsType/OneCasement';
 
 const WindowForm = () => {
 
@@ -13,16 +15,29 @@ const WindowForm = () => {
     const [typeSpecification, setTypeSpecification] = useState([]);
 
     useEffect(() => {
-        getWindowImage(opening, style, type).then(data => {
+        getWindowSpecification(opening, style, type).then(data => {
             setTypeSpecification(data);
         });
     }, []);
+
+    console.log(typeSpecification);
 
     useEffect(() => {
         getColors().then(data => {
             setColors(data);
         });
     }, []);
+
+    const renderCasementComponent = () => {
+        if (typeSpecification) {
+            if (typeSpecification.casementQuantity === 1) {
+                return <OneCasement />;
+            } else if (typeSpecification.casementQuantity === 2) {
+                return <TwoCasement />;
+            }
+        }
+        return null;
+    };
 
     return (
         <Selector title={'Cargar producto'} description={'Complete el formulario para cargar el producto al pedido'}>
@@ -31,29 +46,7 @@ const WindowForm = () => {
 
                     <img src={typeSpecification.image} alt={typeSpecification.name} className={classes.image} />
 
-                    <div className={classes.fields}>
-
-                        <div className={classes.field}>
-                            <label>Ancho: </label>
-                            <input type="number" min={20} required={true} name='width' />
-                        </div>
-
-                        <div className={classes.field}>
-                            <label>Alto: </label>
-                            <input type="number" min={20} required={true} name='height' />
-                        </div>
-
-                        <div className={classes.field}>
-                            <label>Medida de Hoja: </label>
-                            <input type="number" min={20} required={true} name='height1' />
-                        </div>
-
-                        <div className={classes.field}>
-                            <label>Cantidad: </label>
-                            <input type="number" min={1} required={true} name='height2' />
-                        </div>
-
-                    </div>
+                    {renderCasementComponent()}
                 </div>
 
                 <div className={classes.radios}>
@@ -96,7 +89,6 @@ const WindowForm = () => {
                 <Button>Cargar producto</Button>
             </div>
         </Selector>
-
     );
 };
 
