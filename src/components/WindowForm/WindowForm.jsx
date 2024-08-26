@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom';
 import Selector from '../Selector/Selector';
 import TwoCasement from './FieldsType/TwoCasement';
 import OneCasement from './FieldsType/OneCasement';
+import ThreeCasement from './FieldsType/ThreeCasement';
 
 const WindowForm = () => {
 
@@ -34,8 +35,10 @@ const WindowForm = () => {
                 return <OneCasement />;
             } else if (typeSpecification.casementQuantity === 2) {
                 return <TwoCasement />;
+            } else if (typeSpecification.casementQuantity === 3) {
+                return <ThreeCasement />
             }
-        }
+        };
         return null;
     };
 
