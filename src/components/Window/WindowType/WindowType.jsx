@@ -14,8 +14,6 @@ const WindowType = () => {
         });
     }, []);
 
-    console.log('ComponenteProbado')
-
     return (
         <>
             <Selector title={'Tipo de abertura'} description={'Seleccione la configuración de abertura que sea de su preferencia.'}>

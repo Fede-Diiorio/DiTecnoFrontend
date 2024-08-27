@@ -2,12 +2,10 @@ import Selector from "../Selector/Selector";
 import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import classes from './Forms.module.scss';
-import { useLocalStorage } from "../../context/LocalStorageContext";
 import { useCart } from "../../context/CartContext";
 
 const Forms = ({ product }) => {
 
-    const { saveCartToLocalStorage } = useLocalStorage();
     const { addItem } = useCart();
     const { opening, type, design, color, style } = useParams();
     const [formData, setFormData] = useState();

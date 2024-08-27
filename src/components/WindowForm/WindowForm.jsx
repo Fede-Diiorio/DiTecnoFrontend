@@ -11,6 +11,9 @@ import ThreeCasement from './FieldsType/ThreeCasement';
 import { useCart } from '../../context/CartContext';
 
 const WindowForm = () => {
+
+    const { addItem } = useCart();
+
     const { opening, style, type } = useParams();
     const [colors, setColors] = useState([]);
     const [typeSpecification, setTypeSpecification] = useState({});
@@ -53,24 +56,38 @@ const WindowForm = () => {
                 };
             });
         } else {
-            setFormData(prevData => ({
-                ...prevData,
-                [name]: value
-            }));
+            setFormData(prevData => {
+                let newValue;
+
+                if (name === 'quantity') {
+                    // Convertir a entero
+                    newValue = parseInt(value, 10) || '';
+                } else if (['width', 'height', 'casement', 'casement2'].includes(name)) {
+                    // Convertir a float
+                    newValue = parseFloat(value) || '';
+                } else {
+                    newValue = value;
+                }
+
+                return {
+                    ...prevData,
+                    [name]: newValue
+                };
+            });
         }
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // Validación: al menos un color debe estar seleccionado
         if (formData.colors.length === 0) {
             alert("Por favor, selecciona al menos un color.");
             return;
         }
 
         console.log("Datos del formulario:", formData);
-        // Aquí puedes realizar acciones como enviar los datos al servidor.
+
+        addItem(formData);
     };
 
     const renderCasementComponent = () => {
