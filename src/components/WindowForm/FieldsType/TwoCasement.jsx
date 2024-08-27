@@ -1,29 +1,58 @@
 import classes from '../WindowForm.module.scss';
 
-const TwoCasement = () => {
+const TwoCasement = ({ formData, handleInputChange }) => {
     return (
         <div className={classes.fields}>
-
             <div className={classes.field}>
                 <label>Ancho: </label>
-                <input type="number" min={20} max={70} required={true} name='width' />
+                <input
+                    type="number"
+                    min={20}
+                    max={70}
+                    name="width"
+                    value={formData.width}
+                    onChange={handleInputChange}
+                    required
+                />
             </div>
 
             <div className={classes.field}>
                 <label>Alto: </label>
-                <input type="number" min={20} max={210} required={true} name='height' />
+                <input
+                    type="number"
+                    min={20}
+                    max={210}
+                    name="height"
+                    value={formData.height}
+                    onChange={handleInputChange}
+                    required
+                />
             </div>
 
             <div className={classes.field}>
-                <label>Medida de Hoja: </label>
-                <input type="number" min={20} required={true} name='casement' />
+                <label>Medida de hoja: </label>
+                <input
+                    type="number"
+                    min={20}
+                    max={210}
+                    name="casement"
+                    value={formData.casement}
+                    onChange={handleInputChange}
+                    required
+                />
             </div>
 
             <div className={classes.field}>
                 <label>Cantidad: </label>
-                <input type="number" min={1} required={true} name='quantity' />
+                <input
+                    type="number"
+                    min={1}
+                    name="quantity"
+                    value={formData.quantity}
+                    onChange={handleInputChange}
+                    required
+                />
             </div>
-
         </div>
     );
 };

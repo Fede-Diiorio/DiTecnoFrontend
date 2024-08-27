@@ -103,4 +103,25 @@
             }
         }
     }
+
+    .submit {
+        font-family: $secondaryFont;
+        color: $white;
+        background-color: $primaryColor;
+        padding: .25rem 1.5rem;
+        font-size: 1.3rem;
+        border: 2px solid $lightPrimaryColor;
+        border-radius: .25rem;
+        min-width: 7rem;
+        text-decoration: none;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            background-color: $primaryColor;
+            color: $secondaryColor;
+            border: 2px solid $secondaryColor;
+            cursor: pointer;
+            scale: 1.1;
+        }
+    }
 }
