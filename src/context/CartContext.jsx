@@ -23,9 +23,9 @@ export const CartProvider = ({ children }) => {
         let id;
 
         if (productToAdd.product === 'puerta') {
-            id = `${productToAdd.product}-${productToAdd.opening}-${productToAdd.type}-${productToAdd.design}-${productToAdd.color}-${productToAdd.width}-${productToAdd.height}`;
+            id = `${productToAdd.product}-${productToAdd.opening}-${productToAdd.type}-${productToAdd.design}-${productToAdd.colors}-${productToAdd.width}-${productToAdd.height}`;
         } else {
-            id = `${productToAdd.product}-${productToAdd.opening}-${productToAdd.style}-${productToAdd.type}-${productToAdd.color}-${productToAdd.width}-${productToAdd.height}`
+            id = `${productToAdd.product}-${productToAdd.opening}-${productToAdd.style}-${productToAdd.type}-${productToAdd.colors}-${productToAdd.width}-${productToAdd.height}`
         }
 
         const productWithId = {

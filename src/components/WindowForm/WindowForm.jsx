@@ -18,6 +18,7 @@ const WindowForm = () => {
     const [colors, setColors] = useState([]);
     const [typeSpecification, setTypeSpecification] = useState({});
     const [formData, setFormData] = useState({
+        product: 'ventana',
         opening,
         style,
         type,
