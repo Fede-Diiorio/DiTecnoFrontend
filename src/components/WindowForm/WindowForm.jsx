@@ -86,8 +86,6 @@ const WindowForm = () => {
             return;
         }
 
-        console.log("Datos del formulario:", formData);
-
         addItem(formData);
     };
 
