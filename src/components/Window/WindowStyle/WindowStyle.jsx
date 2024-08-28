@@ -14,7 +14,13 @@ const WindowStyle = () => {
         getWindowsStyle(opening).then(data => {
             setStyles(data);
         });
-    }, []);
+    }, [opening]);
+
+    if (!styles) {
+        return (
+            <Selector title={'Cargando...'}></Selector>
+        );
+    };
 
     return (
         <>
