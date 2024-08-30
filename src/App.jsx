@@ -14,7 +14,6 @@ import Checkout from './components/Checkout/Checkout';
 import AboutUs from './components/AboutUs/AboutUs';
 import Galery from './components/Galery/Galery';
 import WindowForm from './components/WindowForm/WindowForm';
-import Testeo from './components/Testeo/Testeo';
 
 function App() {
 
@@ -35,7 +34,6 @@ function App() {
               <Route path='/nosotros' element={<AboutUs />} />
               <Route path='/galeria' element={<Galery />} />
               <Route path='/form' element={<WindowForm />} />
-              <Route path='/testeo' element={<Testeo />} />
             </Routes>
             <Footer />
           </CartProvider>

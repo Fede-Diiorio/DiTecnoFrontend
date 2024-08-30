@@ -4,39 +4,48 @@
     padding: 0 1rem;
     border-radius: 1rem;
 
-    h5 {
+    .title {
         text-transform: uppercase;
-        font-size: 1.3rem;
-        margin: .25rem .5rem;
-        text-align: center;
+        padding: .2rem 0;
     }
 
-    .paragraph {
-        margin: .25rem .5rem !important;
-        color: $black !important;
+    .paragraphs {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3rem;
 
-        strong {
-            color: $black;
-            font-size: 1.1rem;
+        .paragraph {
+            color: $black !important;
+
+            strong {
+                color: $black;
+                font-size: 1.1rem;
+            }
         }
-    }
 
-    button {
-        border: none;
-        margin-left: 85%;
-        padding-bottom: .25rem;
-    }
+        .image {
+            height: 7rem;
+            padding: .5rem 0;
+        }
 
-    .icon {
-        text-align: center;
-        background-color: transparent;
-        color: $red;
-        font-size: 1.8rem;
-        transition: all .3s ease-in-out;
+        button {
+            border: none;
+            padding-bottom: .25rem;
+            background-color: transparent;
+        }
 
-        &:hover {
-            color: $darkRed;
-            scale: 1.1;
+        .icon {
+            text-align: center;
+            background-color: transparent;
+            color: $red;
+            font-size: 1.8rem;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                color: $darkRed;
+                scale: 1.1;
+            }
         }
     }
 
