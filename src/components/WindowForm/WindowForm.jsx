@@ -1,5 +1,4 @@
 import classes from './WindowForm.module.scss';
-import Button from '../Button/Button';
 import { useEffect, useState } from 'react';
 import { getColors } from '../../utils/getColors';
 import { getWindowSpecification } from '../../utils/getWindows';
@@ -9,10 +8,12 @@ import TwoCasement from './FieldsType/TwoCasement';
 import OneCasement from './FieldsType/OneCasement';
 import ThreeCasement from './FieldsType/ThreeCasement';
 import { useCart } from '../../context/CartContext';
+import { useNavigate } from 'react-router-dom';
 
 const WindowForm = () => {
 
     const { addItem } = useCart();
+    const navigate = useNavigate();
 
     const { opening, style, type } = useParams();
     const [colors, setColors] = useState([]);
@@ -87,6 +88,7 @@ const WindowForm = () => {
         }
 
         addItem(formData);
+        navigate('/')
     };
 
     const renderCasementComponent = () => {

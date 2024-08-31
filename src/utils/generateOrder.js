@@ -22,9 +22,9 @@ export const useGenerateOrder = () => {
 
             if (response.ok) {
                 console.log('Orden enviada con éxito');
-                // clearCart();
-                // clearCartFromLocalStorage();
-                // navigate('/');
+                clearCart();
+                clearCartFromLocalStorage();
+                navigate('/');
             } else {
                 navigate('/cart')
                 console.error('Error al enviar la orden');
