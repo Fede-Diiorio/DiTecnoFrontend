@@ -8,6 +8,7 @@ import CartItem from "../CartItem/CartItem";
 const CartView = () => {
     const { cart, clearCart, totalQuantity } = useCart();
     const { clearCartFromLocalStorage } = useLocalStorage();
+    console.log(cart)
 
     const handlerClearCart = () => {
         clearCart();

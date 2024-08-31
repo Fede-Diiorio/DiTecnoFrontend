@@ -113,12 +113,12 @@ const WindowForm = () => {
                 <div className={classes.radios}>
                     <div className={classes.radio}>
                         <label htmlFor="dvhEstandar">Vidrio DVH estándar</label>
-                        <input type="radio" id="dvhEstandar" name="glassType" value="dvhEstandar" onChange={handleInputChange} required />
+                        <input type="radio" id="dvhEstandar" name="glassType" value="Estandar" onChange={handleInputChange} required />
                     </div>
 
                     <div className={classes.radio}>
                         <label htmlFor="dvhLaminado">Vidrio DVH laminado</label>
-                        <input type="radio" id="dvhLaminado" name="glassType" value="dvhLaminado" onChange={handleInputChange} />
+                        <input type="radio" id="dvhLaminado" name="glassType" value="Laminado" onChange={handleInputChange} />
                     </div>
                 </div>
 

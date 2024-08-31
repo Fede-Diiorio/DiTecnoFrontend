@@ -3,26 +3,19 @@
     background-color: $white;
     padding: 0 1rem;
     border-radius: 1rem;
+    margin: 0 auto;
+    width: 80%;
 
     .title {
         text-transform: uppercase;
         padding: .2rem 0;
     }
 
-    .paragraphs {
+    .product {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 3rem;
-
-        .paragraph {
-            color: $black !important;
-
-            strong {
-                color: $black;
-                font-size: 1.1rem;
-            }
-        }
 
         .image {
             height: 7rem;
@@ -47,8 +40,30 @@
                 scale: 1.1;
             }
         }
-    }
 
+        .information {
+            width: 100%;
+
+            .info,
+            .dimensions {
+                display: flex;
+                gap: 2rem;
+            }
+
+            .dimensions {
+                margin-bottom: 1rem;
+            }
+
+            .data {
+                color: $black !important;
+
+                strong {
+                    color: $black;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
 }
 
 @media(max-width: 992px) {
