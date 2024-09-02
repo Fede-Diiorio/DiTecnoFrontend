@@ -18,7 +18,9 @@ const CartView = () => {
     if (totalQuantity === 0) {
         return (
             <Selector title={'No tiene productos agregados'}>
-                <Button to={'/producto'}>Agregar un producto</Button>
+                <div className={classes.nav}>
+                    <Button to={'/producto'}>Agregar un producto</Button>
+                </div>
             </Selector>
         );
     };
