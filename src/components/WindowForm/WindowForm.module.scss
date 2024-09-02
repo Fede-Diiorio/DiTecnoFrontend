@@ -63,6 +63,7 @@
 
     .colors {
         display: flex;
+        flex-wrap: wrap;
         gap: 2rem;
         margin-bottom: 1rem;
 
@@ -122,6 +123,33 @@
             border: 2px solid $secondaryColor;
             cursor: pointer;
             scale: 1.1;
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .form {
+        .formContainer {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fields {
+            margin-top: 2rem;
+
+            .field {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+@media(max-width: 992px) {
+    .form {
+        .formContainer {
+            .image {
+                height: 10rem;
+            }
         }
     }
 }
