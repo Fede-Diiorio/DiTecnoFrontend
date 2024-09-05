@@ -37,10 +37,63 @@
     }
 }
 
+.dropdownMenu {
+    background-color: white;
+    position: absolute;
+    border: 2px solid $primaryColor;
+    border-radius: 1rem;
+    box-shadow: 9px 8px 20px 0px $black;
+    z-index: 2;
+    right: 0;
+
+    opacity: 0;
+    transform: translateY(-10px); // Mueve ligeramente el menú hacia arriba cuando está oculto
+    transition: opacity 0.3s ease, transform 0.3s ease; // Transición suave
+
+    &.open {
+        opacity: 1;
+        transform: translateY(0); // Devuelve el menú a su posición original al abrirlo
+    }
+
+    ul {
+        list-style: none;
+        padding: .2rem 1rem;
+
+        li {
+            margin: .7rem 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: $black;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                color: $primaryColor;
+            }
+        }
+    }
+}
+
+
 @media(max-width: 668px) {
     .background {
         .container {
             flex-direction: column;
+        }
+    }
+
+    .dropdownMenu {
+        left: 50%;
+        right: auto;
+        top: 1rem;
+
+        ul {
+            li {
+                a {
+                    font-size: 1.3rem;
+                }
+            }
         }
     }
 }
