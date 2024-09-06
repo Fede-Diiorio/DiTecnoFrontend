@@ -14,6 +14,8 @@ import Checkout from './components/Checkout/Checkout';
 import AboutUs from './components/AboutUs/AboutUs';
 import Galery from './components/Galery/Galery';
 import WindowForm from './components/WindowForm/WindowForm';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -39,6 +41,7 @@ function App() {
           </CartProvider>
         </LocalStorageProvider>
       </BrowserRouter>
+      <ToastContainer position='bottom-right' />
     </main>
   );
 };

@@ -9,11 +9,16 @@ import OneCasement from './FieldsType/OneCasement';
 import ThreeCasement from './FieldsType/ThreeCasement';
 import { useCart } from '../../context/CartContext';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const WindowForm = () => {
 
     const { addItem } = useCart();
     const navigate = useNavigate();
+    const successNotification = () => toast.success('¡Producto cargado!');
+    const alertNotification = () => toast.warn('Por favor, selecciona al menos un color.', {
+        autoClose: 5000,
+    });
 
     const { opening, style, type } = useParams();
     const [colors, setColors] = useState([]);
@@ -83,12 +88,13 @@ const WindowForm = () => {
         e.preventDefault();
 
         if (formData.colors.length === 0) {
-            alert("Por favor, selecciona al menos un color.");
+            alertNotification();
             return;
-        }
+        };
 
         addItem(formData);
-        navigate('/')
+        successNotification();
+        navigate('/');
     };
 
     const renderCasementComponent = () => {

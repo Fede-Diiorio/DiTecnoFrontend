@@ -4,13 +4,14 @@ import { useLocalStorage } from '../../context/LocalStorageContext';
 import { FaTrashCan } from 'react-icons/fa6';
 import { getWindowSpecification } from '../../utils/getWindows';
 import { useEffect, useState } from 'react';
+import { toast } from "react-toastify";
 
 const CartItem = ({ product, type, quantity, id, style, colors, design, opening, casement, casement2, glassType, height, width }) => {
 
     const { removeItem } = useCart();
     const { removeProductFromLocalStorage } = useLocalStorage();
-
     const [typeSpecification, setTypeSpecification] = useState();
+    const successNotify = () => toast.success('Producto eliminado.');
 
     useEffect(() => {
         getWindowSpecification(opening, style, type).then(data => {
@@ -19,6 +20,7 @@ const CartItem = ({ product, type, quantity, id, style, colors, design, opening,
     }, [opening, style, type]);
 
     const deleteItem = () => {
+        successNotify();
         removeProductFromLocalStorage(id);
         removeItem(id);
     }

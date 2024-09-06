@@ -4,13 +4,16 @@ import classes from './CartView.module.scss';
 import Button from '../Button/Button'
 import Selector from '../Selector/Selector';
 import CartItem from "../CartItem/CartItem";
+import { toast } from "react-toastify";
 
 const CartView = () => {
     const { cart, clearCart, totalQuantity } = useCart();
     const { clearCartFromLocalStorage } = useLocalStorage();
-    console.log(cart)
+    const successNotify = () => toast.success('Su carrito se ha vaciado.');
+
 
     const handlerClearCart = () => {
+        successNotify();
         clearCart();
         clearCartFromLocalStorage();
     };
