@@ -24,7 +24,7 @@ const Footer = () => {
                             <ul>
                                 <li><Link className={classes.infoLi}>Preguntas</Link></li>
                                 <li><Link className={classes.infoLi}>Compras</Link></li>
-                                <li><Link className={classes.infoLi}>Reportar Errores</Link></li>
+                                <li><Link className={classes.infoLi} to={'/reportar'}>Reportar Errores</Link></li>
                             </ul>
                         </div>
 
