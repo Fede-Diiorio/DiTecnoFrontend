@@ -29,9 +29,9 @@ const Header = () => {
             <div className={`container ${isMenuOpen ? classes.open : ''}`}>
                 <nav className={`${classes.dropdownMenu} ${isMenuOpen ? classes.open : ''}`}>
                     <ul>
-                        <li><Link onClick={closeMenu} to="/">Inicio</Link></li>
-                        <li><Link onClick={closeMenu} to="/nosotros">Nosotros</Link></li>
-                        <li><Link onClick={closeMenu} to="/galeria">Galería</Link></li>
+                        <li><Link className={classes.link} onClick={closeMenu} to="/">Inicio</Link></li>
+                        <li><Link className={classes.link} onClick={closeMenu} to="/nosotros">Nosotros</Link></li>
+                        <li><Link className={classes.link} onClick={closeMenu} to="/galeria">Galería</Link></li>
                     </ul>
                 </nav>
             </div>
