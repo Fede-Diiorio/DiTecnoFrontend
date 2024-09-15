@@ -16,6 +16,7 @@ import Galery from './components/Galery/Galery';
 import WindowForm from './components/WindowForm/WindowForm';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ErrorView from './components/ErrorView/ErrorView';
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
               <Route path='/nosotros' element={<AboutUs />} />
               <Route path='/galeria' element={<Galery />} />
               <Route path='/form' element={<WindowForm />} />
+              <Route path='*' element={<ErrorView />} />
             </Routes>
             <Footer />
           </CartProvider>
