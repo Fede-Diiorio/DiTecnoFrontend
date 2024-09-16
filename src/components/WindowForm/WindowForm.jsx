@@ -8,7 +8,7 @@ import TwoCasement from './FieldsType/TwoCasement';
 import OneCasement from './FieldsType/OneCasement';
 import ThreeCasement from './FieldsType/ThreeCasement';
 import { useCart } from '../../context/CartContext';
-import { handleInputChange, initializeFormData, handleSubmit } from '../../utils/useWindowForm';
+import { handleInputChange, initializeFormData, handleSubmit } from '../../utils/windowFormFunctions';
 
 const WindowForm = () => {
     const { opening, style, type } = useParams();
