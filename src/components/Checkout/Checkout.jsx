@@ -2,21 +2,16 @@ import Selector from '../Selector/Selector';
 import classes from './Checkout.module.scss';
 import { useState } from 'react';
 import { useGenerateOrder } from '../../utils/generateOrder';
-import { toast } from 'react-toastify';
 
 const Checkout = () => {
 
     const generateOrder = useGenerateOrder();
-    const successNotify = () => toast.success('¡Orden enviada exitosamente!');
-
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        successNotify();
         generateOrder(name, email, phone);
     };
 

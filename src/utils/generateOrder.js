@@ -1,6 +1,7 @@
 import { useCart } from "../context/CartContext";
 import { useLocalStorage } from "../context/LocalStorageContext";
 import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 const apiUrl = import.meta.env.VITE_HOST;
 
@@ -8,6 +9,7 @@ export const useGenerateOrder = () => {
     const { cart, clearCart } = useCart();
     const { clearCartFromLocalStorage } = useLocalStorage();
     const navigate = useNavigate();
+    const successNotify = () => toast.success('¡Orden enviada exitosamente!');
 
     const generateOrder = async (name, email, phone) => {
         const orderData = { name, email, phone, cart };
@@ -21,9 +23,9 @@ export const useGenerateOrder = () => {
             });
 
             if (response.ok) {
-                console.log('Orden enviada con éxito');
                 clearCart();
                 clearCartFromLocalStorage();
+                successNotify();
                 navigate('/');
             } else {
                 navigate('/cart')
@@ -31,7 +33,7 @@ export const useGenerateOrder = () => {
             }
         } catch (error) {
             console.error('Error en la solicitud:', error);
-        }
+        };
     };
 
     return generateOrder;
