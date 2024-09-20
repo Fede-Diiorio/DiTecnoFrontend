@@ -1,14 +1,24 @@
 import classes from '../WindowForm.module.scss';
+import { useLocation } from 'react-router-dom';
 
 const OneCasement = ({ formData, handleInputChange }) => {
+
+    const location = useLocation();
+    const isWindow = location.pathname.includes('/ventana');
+
+    const heightMin = isWindow ? 20 : 2000;
+    const heightMax = isWindow ? 210 : 2200;
+    const widthMin = isWindow ? 20 : 1000;
+    const widthMax = isWindow ? 70 : 1200;
+
     return (
         <div className={classes.fields}>
             <div className={classes.field}>
                 <label>Ancho: </label>
                 <input
                     type="number"
-                    min={20}
-                    max={70}
+                    min={widthMin}
+                    max={widthMax}
                     name="width"
                     value={formData.width}
                     onChange={handleInputChange}
@@ -20,8 +30,8 @@ const OneCasement = ({ formData, handleInputChange }) => {
                 <label>Alto: </label>
                 <input
                     type="number"
-                    min={20}
-                    max={210}
+                    min={heightMin}
+                    max={heightMax}
                     name="height"
                     value={formData.height}
                     onChange={handleInputChange}

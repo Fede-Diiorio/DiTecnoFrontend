@@ -2,13 +2,13 @@ import classes from './WindowForm.module.scss';
 import { useEffect, useState } from 'react';
 import { getColors } from '../../utils/getColors';
 import { getWindowSpecification } from '../../utils/getWindows';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import Selector from '../Selector/Selector';
 import TwoCasement from './FieldsType/TwoCasement';
 import OneCasement from './FieldsType/OneCasement';
 import ThreeCasement from './FieldsType/ThreeCasement';
 import { useCart } from '../../context/CartContext';
-import { handleInputChange, initializeFormData, handleSubmit } from '../../utils/windowFormFunctions';
+import { handleInputChange, initializeFormData, handleSubmit } from '../../utils/useFormFunctions';
 import ColorSelector from '../ColorSelector/ColorSelector';
 
 const WindowForm = () => {
@@ -19,6 +19,9 @@ const WindowForm = () => {
 
     const { addItem } = useCart();
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const isWindow = location.pathname.includes('/ventana');
 
     // Obtener especificaciones de la ventana
     useEffect(() => {
@@ -42,14 +45,9 @@ const WindowForm = () => {
         return null;
     };
 
-    return (
-        <Selector title={'Cargar producto'} description={'Complete el formulario para cargar el producto al pedido'}>
-            <form className={classes.form} onSubmit={(e) => handleSubmit(e, formData, addItem, navigate)}>
-                <div className={classes.formContainer}>
-                    <img src={typeSpecification.image} alt={typeSpecification.name} className={classes.image} />
-                    {renderCasementComponent()}
-                </div>
-
+    const renderGlassOptions = () => {
+        if (isWindow) {
+            return (
                 <div className={classes.radios}>
                     <div className={classes.radio}>
                         <label htmlFor="dvhEstandar">Vidrio DVH estándar</label>
@@ -61,6 +59,19 @@ const WindowForm = () => {
                         <input type="radio" id="dvhLaminado" name="glassType" value="Laminado" onChange={(e) => handleInputChange(e, formData, setFormData)} />
                     </div>
                 </div>
+            );
+        };
+    };
+
+    return (
+        <Selector title={'Cargar producto'} description={'Complete el formulario para cargar el producto al pedido'}>
+            <form className={classes.form} onSubmit={(e) => handleSubmit(e, formData, addItem, navigate)}>
+                <div className={classes.formContainer}>
+                    <img src={typeSpecification.image} alt={typeSpecification.name} className={classes.image} />
+                    {renderCasementComponent()}
+                </div>
+
+                {renderGlassOptions()}
 
                 <ColorSelector colors={colors} formData={formData} handleInputChange={(e) => handleInputChange(e, formData, setFormData)} />
 
