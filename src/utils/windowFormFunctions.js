@@ -1,7 +1,5 @@
-import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-const navigate = useNavigate();
 const successNotification = () => toast.success('¡Producto cargado!');
 const alertNotification = () => toast.warn('Por favor, selecciona al menos un color.', { autoClose: 5000 });
 
@@ -46,7 +44,7 @@ export const handleInputChange = (e, formData, setFormData) => {
 };
 
 // Función para enviar el formulario
-export const handleSubmit = (e, formData, addItem) => {
+export const handleSubmit = (e, formData, addItem, navigate) => {
     e.preventDefault();
     if (formData.colors.length === 0) {
         alertNotification();

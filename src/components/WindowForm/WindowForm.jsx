@@ -2,7 +2,7 @@ import classes from './WindowForm.module.scss';
 import { useEffect, useState } from 'react';
 import { getColors } from '../../utils/getColors';
 import { getWindowSpecification } from '../../utils/getWindows';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Selector from '../Selector/Selector';
 import TwoCasement from './FieldsType/TwoCasement';
 import OneCasement from './FieldsType/OneCasement';
@@ -17,6 +17,7 @@ const WindowForm = () => {
     const [formData, setFormData] = useState(initializeFormData(opening, style, type));
 
     const { addItem } = useCart();
+    const navigate = useNavigate();
 
     // Obtener especificaciones de la ventana
     useEffect(() => {
@@ -42,7 +43,7 @@ const WindowForm = () => {
 
     return (
         <Selector title={'Cargar producto'} description={'Complete el formulario para cargar el producto al pedido'}>
-            <form className={classes.form} onSubmit={(e) => handleSubmit(e, formData, addItem, navigate, successNotification, alertNotification)}>
+            <form className={classes.form} onSubmit={(e) => handleSubmit(e, formData, addItem, navigate)}>
                 <div className={classes.formContainer}>
                     <img src={typeSpecification.image} alt={typeSpecification.name} className={classes.image} />
                     {renderCasementComponent()}
