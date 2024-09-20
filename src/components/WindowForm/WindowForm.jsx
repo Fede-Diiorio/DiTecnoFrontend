@@ -9,6 +9,7 @@ import OneCasement from './FieldsType/OneCasement';
 import ThreeCasement from './FieldsType/ThreeCasement';
 import { useCart } from '../../context/CartContext';
 import { handleInputChange, initializeFormData, handleSubmit } from '../../utils/windowFormFunctions';
+import ColorSelector from '../ColorSelector/ColorSelector';
 
 const WindowForm = () => {
     const { opening, style, type } = useParams();
@@ -61,24 +62,7 @@ const WindowForm = () => {
                     </div>
                 </div>
 
-                <ul className={classes.colors}>
-                    {colors.map(color => (
-                        <li key={color.id}>
-                            <input
-                                type="checkbox"
-                                id={`color-${color.slug}`}
-                                name="color"
-                                value={color.slug}
-                                className={classes.hiddenCheckbox}
-                                onChange={(e) => handleInputChange(e, formData, setFormData)}
-                            />
-                            <label htmlFor={`color-${color.slug}`} className={classes.colorLabel}>
-                                <p>{color.name}</p>
-                                <img className={`doorColor ${classes.colorImage}`} src={color.image} alt={`Imagen del color ${color.slug}`} />
-                            </label>
-                        </li>
-                    ))}
-                </ul>
+                <ColorSelector colors={colors} formData={formData} handleInputChange={(e) => handleInputChange(e, formData, setFormData)} />
 
                 <input type="submit" value='Agregar al carrito' className={classes.submit} />
             </form>
