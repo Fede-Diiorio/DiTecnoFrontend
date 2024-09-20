@@ -1,27 +1,29 @@
 import Selector from "../../Selector/Selector";
 import { getDoorsType } from "../../../utils/getDoors";
 import { useEffect, useState } from "react";
-import Button from "../../Button/Button";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import classes from './DoorType.module.scss'
 
 const DoorType = () => {
     const { opening, style } = useParams();
-    const [design, setDesign] = useState([]);
+    const [types, setTypes] = useState([]);
 
     useEffect(() => {
         getDoorsType(opening, style).then(data => {
-            setDesign(data);
+            setTypes(data);
         });
     }, []);
 
     return (
         <>
-            <Selector title={'Diseño de puerta'} description={'Seleccione un diseño de puerta que sea de su gusto.'}>
-                <ul className='optionButtonflex'>
-                    {design.map(product => (
+            <Selector title={'Estilo de la puerta'} description={'Seleccione una de las variantes disponibles que sea de su agrado.'}>
+                <ul className={classes.ul}>
+                    {types.map(product => (
                         <li key={product.id}>
-                            <img className="doorDesign" src={product.image} alt={product.name} />
-                            <Button to={product.slug}>{product.name}</Button>
+                            <Link to={product.slug} className={classes.link}>
+                                <img className="doorDesign" src={product.image} alt={product.name} />
+                                <p className={classes.paragraph}><strong>Descripción: </strong>{product.name}</p>
+                            </Link>
                         </li>
                     ))}
                 </ul>

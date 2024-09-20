@@ -7,19 +7,19 @@ import { useParams } from "react-router-dom";
 const DoorStyle = () => {
 
     const { opening } = useParams();
-    const [types, setTypes] = useState([]);
+    const [styles, setStyles] = useState([]);
 
     useEffect(() => {
         getDoorsStyle(opening).then(data => {
-            setTypes(data);
+            setStyles(data);
         });
     }, [opening]);
 
     return (
         <>
-            <Selector title={'Dirección de apertura'} description={'Seleccione la dirección de apertura para su puerta.'}>
+            <Selector title={'Cantidad de hojas'} description={'Seleccione la cantidad de hojas requerida en su apertura.'}>
                 <ul className='optionButtonflex'>
-                    {types.map(product => (
+                    {styles.map(product => (
                         <li key={product.id}>
                             <Button to={product.slug}>{product.name}</Button>
                         </li>
