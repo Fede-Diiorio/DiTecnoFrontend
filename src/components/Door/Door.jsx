@@ -1,9 +1,8 @@
 import { Route, Routes, useParams } from 'react-router-dom';
 import DoorOpening from './DoorOpening/DoorOpening';
+import DoorSyle from './DoorStyle/DoorStyle';
 import DoorType from './DoorType/DoorType';
-import DoorColor from './DoorColor/DoorColor';
 import DoorDesign from './DoorDesign/DoorDesign';
-import Forms from '../Forms/Forms';
 
 const Door = () => {
 
@@ -12,10 +11,9 @@ const Door = () => {
             <div >
                 <Routes>
                     <Route path='/' element={<DoorOpening />} />
-                    <Route path='/:opening' element={<DoorType />} />
-                    <Route path='/:opening/:type/' element={<DoorDesign />} />
-                    <Route path='/:opening/:type/:design' element={<DoorColor />} />
-                    <Route path='/:opening/:type/:design/:color' element={<Forms product={'puerta'} />} />
+                    <Route path='/:opening' element={<DoorSyle />} />
+                    <Route path='/:opening/:style/' element={<DoorType />} />
+                    <Route path='/:opening/:style/:type' element={<DoorDesign />} />
                 </Routes>
             </div>
         </section>

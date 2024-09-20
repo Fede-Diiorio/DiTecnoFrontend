@@ -5,22 +5,22 @@ import Button from "../../Button/Button";
 import { useParams } from "react-router-dom";
 
 const DoorType = () => {
-
-    const { opening } = useParams();
-    const [types, setTypes] = useState([]);
+    const { opening, style } = useParams();
+    const [design, setDesign] = useState([]);
 
     useEffect(() => {
-        getDoorsType(opening).then(data => {
-            setTypes(data);
+        getDoorsType(opening, style).then(data => {
+            setDesign(data);
         });
     }, []);
 
     return (
         <>
-            <Selector title={'Dirección de apertura'} description={'Seleccione la dirección de apertura para su puerta.'}>
+            <Selector title={'Diseño de puerta'} description={'Seleccione un diseño de puerta que sea de su gusto.'}>
                 <ul className='optionButtonflex'>
-                    {types.map(product => (
+                    {design.map(product => (
                         <li key={product.id}>
+                            <img className="doorDesign" src={product.image} alt={product.name} />
                             <Button to={product.slug}>{product.name}</Button>
                         </li>
                     ))}

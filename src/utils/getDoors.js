@@ -9,7 +9,7 @@ export const getDoors = () => {
         });
 };
 
-export const getDoorsType = (opening) => {
+export const getDoorsStyle = (opening) => {
     return fetch(`${apiUrl}/api/puerta/${opening}`)
         .then(response => response.json())
         .catch(error => {
@@ -18,8 +18,8 @@ export const getDoorsType = (opening) => {
         });
 };
 
-export const getDoorsDesigns = (opening, type) => {
-    return fetch(`${apiUrl}/api/puerta/${opening}/${type}`)
+export const getDoorsType = (opening, style) => {
+    return fetch(`${apiUrl}/api/puerta/${opening}/${style}`)
         .then(response => response.json())
         .catch(error => {
             console.error('Error en el fetch: ', error);
@@ -27,8 +27,8 @@ export const getDoorsDesigns = (opening, type) => {
         });
 };
 
-export const getDoorsColors = (opening, type, design) => {
-    return fetch(`${apiUrl}/api/puerta/${opening}/${type}/${design}`)
+export const getDoorsDesigns = (opening, style, type) => {
+    return fetch(`${apiUrl}/api/puerta/${opening}/${style}/${type}`)
         .then(response => response.json())
         .catch(error => {
             console.error('Error en el fetch: ', error);
