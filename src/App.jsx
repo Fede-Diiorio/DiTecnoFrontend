@@ -13,7 +13,7 @@ import CartView from './components/CartView/CartView';
 import Checkout from './components/Checkout/Checkout';
 import AboutUs from './components/AboutUs/AboutUs';
 import Galery from './components/Galery/Galery';
-import WindowForm from './components/WindowForm/WindowForm';
+import ProductForm from './components/ProductForm/ProductForm';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ErrorView from './components/ErrorView/ErrorView';
@@ -37,7 +37,7 @@ function App() {
               <Route path='/checkout' element={<Checkout />} />
               <Route path='/nosotros' element={<AboutUs />} />
               <Route path='/galeria' element={<Galery />} />
-              <Route path='/form' element={<WindowForm />} />
+              <Route path='/form' element={<ProductForm />} />
               <Route path='*' element={<ErrorView />} />
               <Route path='/reportar' element={<ErrorForm />} />
             </Routes>

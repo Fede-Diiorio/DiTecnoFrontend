@@ -1,7 +1,7 @@
-import classes from '../WindowForm.module.scss';
+import classes from '../ProductForm.module.scss';
 import { useLocation } from 'react-router-dom';
 
-const ThreeCasement = ({ formData, handleInputChange }) => {
+const FourCasement = ({ formData, handleInputChange }) => {
 
     const location = useLocation();
     const isWindow = location.pathname.includes('/ventana');
@@ -59,7 +59,20 @@ const ThreeCasement = ({ formData, handleInputChange }) => {
                     min={heightMin}
                     max={heightMax}
                     name="casement2"
-                    value={formData.casement2}
+                    value={formData.casement}
+                    onChange={handleInputChange}
+                    required
+                />
+            </div>
+
+            <div className={classes.field}>
+                <label>Medida de hoja 3: </label>
+                <input
+                    type="number"
+                    min={widthMin}
+                    max={widthMax}
+                    name="casement3"
+                    value={formData.casement}
                     onChange={handleInputChange}
                     required
                 />
@@ -80,4 +93,4 @@ const ThreeCasement = ({ formData, handleInputChange }) => {
     );
 };
 
-export default ThreeCasement;
+export default FourCasement;

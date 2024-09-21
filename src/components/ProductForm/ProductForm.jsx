@@ -1,4 +1,4 @@
-import classes from './WindowForm.module.scss';
+import classes from './ProductForm.module.scss';
 import { useEffect, useState } from 'react';
 import { getColors } from '../../utils/getColors';
 import { getWindowSpecification } from '../../utils/getWindows';
@@ -7,11 +7,12 @@ import Selector from '../Selector/Selector';
 import TwoCasement from './FieldsType/TwoCasement';
 import OneCasement from './FieldsType/OneCasement';
 import ThreeCasement from './FieldsType/ThreeCasement';
+import FourCasement from './FieldsType/FourCasement';
 import { useCart } from '../../context/CartContext';
 import { handleInputChange, initializeFormData, handleSubmit } from '../../utils/useFormFunctions';
-import ColorSelector from '../ColorSelector/ColorSelector';
+import ColorSelector from './ColorSelector/ColorSelector';
 
-const WindowForm = () => {
+const ProductForm = () => {
     const { opening, style, type } = useParams();
     const [colors, setColors] = useState([]);
     const [typeSpecification, setTypeSpecification] = useState({});
@@ -41,6 +42,8 @@ const WindowForm = () => {
             return <TwoCasement formData={formData} handleInputChange={(e) => handleInputChange(e, formData, setFormData)} />;
         } else if (typeSpecification.casementQuantity === 3) {
             return <ThreeCasement formData={formData} handleInputChange={(e) => handleInputChange(e, formData, setFormData)} />;
+        } else if (typeSpecification.casementQuantity === 4) {
+            return <FourCasement formData={formData} handleInputChange={(e) => handleInputChange(e, formData, setFormData)} />;
         };
         return null;
     };
@@ -81,4 +84,4 @@ const WindowForm = () => {
     );
 };
 
-export default WindowForm;
+export default ProductForm;
