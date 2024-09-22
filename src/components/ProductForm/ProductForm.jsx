@@ -2,6 +2,7 @@ import classes from './ProductForm.module.scss';
 import { useEffect, useState } from 'react';
 import { getColors } from '../../utils/getColors';
 import { getWindowSpecification } from '../../utils/getWindows';
+import { getDoorModel } from '../../utils/getDoors';
 import { useParams, useNavigate } from 'react-router-dom';
 import Selector from '../Selector/Selector';
 import { useCart } from '../../context/CartContext';
@@ -19,10 +20,18 @@ const ProductForm = () => {
     const { addItem } = useCart();
     const navigate = useNavigate();
 
-    // Obtener especificaciones de la ventana
-    useEffect(() => {
-        getWindowSpecification(opening, style, type).then(setTypeSpecification);
-    }, [opening, style, type]);
+    // Obtener especificaciones del product
+    if (!design) {
+        useEffect(() => {
+            getWindowSpecification(opening, style, type).then(setTypeSpecification);
+        }, [opening, style, type]);
+    } else {
+        useEffect(() => {
+            getDoorModel(opening, style, type, design).then(setTypeSpecification)
+        }, [opening, style, type, design]);
+    };
+
+    console.log(typeSpecification);
 
     // Obtener colores disponibles
     useEffect(() => {
