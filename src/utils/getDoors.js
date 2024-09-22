@@ -35,3 +35,12 @@ export const getDoorsDesigns = (opening, style, type) => {
             return [];
         });
 };
+
+export const getDoorModel = (opening, style, type, design) => {
+    return fetch(`${apiUrl}/api/puerta/${opening}/${style}/${type}/${design}`)
+        .then(response => response.json())
+        .catch(error => {
+            console.error('Error en el fetch: ', error);
+            return [];
+        });
+};

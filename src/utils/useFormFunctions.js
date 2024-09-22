@@ -3,15 +3,17 @@ import { toast } from 'react-toastify';
 const successNotification = () => toast.success('¡Producto cargado!');
 const alertNotification = () => toast.warn('Por favor, selecciona al menos un color.', { autoClose: 5000 });
 
-export const initializeFormData = (opening, style, type) => ({
-    product: 'ventana',
+export const initializeFormData = (opening, style, type, design) => ({
+    product: design ? 'puerta' : 'ventana',
     opening,
     style,
     type,
+    design,
     width: '',
     height: '',
     casement: '',
     casement2: '',
+    casement3: '',
     quantity: '',
     glassType: '',
     colors: [],
@@ -33,7 +35,7 @@ export const handleInputChange = (e, formData, setFormData) => {
             let newValue;
             if (name === 'quantity') {
                 newValue = parseInt(value, 10) || '';
-            } else if (['width', 'height', 'casement', 'casement2'].includes(name)) {
+            } else if (['width', 'height', 'casement', 'casement2', 'casement3'].includes(name)) {
                 newValue = parseFloat(value) || '';
             } else {
                 newValue = value;
