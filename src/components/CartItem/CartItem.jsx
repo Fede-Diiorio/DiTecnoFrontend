@@ -4,16 +4,6 @@ import { useEffect, useState } from 'react';
 import WindowItem from './WindowItem';
 import DoorItem from './DoorItem';
 
-const Cart = ({ cartItems }) => {
-    return (
-        <div>
-            {cartItems.map((item, index) => (
-                <CartItem key={index} {...item} />
-            ))}
-        </div>
-    );
-};
-
 const CartItem = ({ product, type, quantity, id, style, colors, design, opening, casement, casement2, casement3, glassType, height, width }) => {
     const [typeSpecification, setTypeSpecification] = useState(null);
 
@@ -38,9 +28,8 @@ const CartItem = ({ product, type, quantity, id, style, colors, design, opening,
     if (product === 'puerta') {
         return (
             <DoorItem
-                product={product}
+                product={typeSpecification?.name}
                 opening={opening}
-                style={style}
                 image={typeSpecification?.image}
                 height={height}
                 width={width}
@@ -75,4 +64,4 @@ const CartItem = ({ product, type, quantity, id, style, colors, design, opening,
     return null; // Si no es ni "puerta" ni "ventana", no renderiza nada
 };
 
-export default Cart;
+export default CartItem;

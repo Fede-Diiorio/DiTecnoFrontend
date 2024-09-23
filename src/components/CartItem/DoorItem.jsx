@@ -4,7 +4,7 @@ import { useLocalStorage } from '../../context/LocalStorageContext';
 import { toast } from 'react-toastify';
 import { FaTrashCan } from 'react-icons/fa6';
 
-const DoorItem = ({ product, opening, style, image, height, width, casementPayload, casement2Payload, casement3Payload, colorsPayload, quantity }) => {
+const DoorItem = ({ product, opening, image, height, width, casementPayload, casement2Payload, casement3Payload, colorsPayload, quantity }) => {
 
     const { removeItem } = useCart();
     const { removeProductFromLocalStorage } = useLocalStorage();
@@ -18,9 +18,9 @@ const DoorItem = ({ product, opening, style, image, height, width, casementPaylo
 
     return (
         <div className={classes.container}>
-            <h5 className={classes.title}>{product} abertura {opening} {style}</h5>
+            <h5 className={classes.title}>{product} apertura {opening}</h5>
             <div className={classes.product}>
-                <img className={classes.image} src={image} alt={`Imagen de ${product} ${style}`} />
+                <img className={classes.image} src={image} alt={`Imagen de ${product}`} />
                 <div className={classes.information}>
 
                     <div className={classes.dimensions}>

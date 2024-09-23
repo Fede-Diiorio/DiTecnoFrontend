@@ -18,7 +18,7 @@ const WindowItem = ({ product, opening, style, image, height, width, casementPay
 
     return (
         <div className={classes.container}>
-            <h5 className={classes.title}>{product} abertura {opening} {style}</h5>
+            <h5 className={classes.title}>{product} apertura {opening} {style}</h5>
             <div className={classes.product}>
                 <img className={classes.image} src={image} alt={`Imagen de ${product} ${style}`} />
                 <div className={classes.information}>
