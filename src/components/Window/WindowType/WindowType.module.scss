@@ -13,7 +13,6 @@
         border: 2px solid $lightPrimaryColor;
         border-radius: 1rem;
         transition: all .3s ease-in-out;
-        box-shadow: 0 0 0 0 $darkGrey;
 
         p {
             color: $black;
@@ -28,7 +27,7 @@
         &:hover {
             scale: 1.1;
             border: 2px solid $secondaryColor;
-            box-shadow: 5px 6px 7px 3px $darkGrey;
+            box-shadow: $boxShadow $darkGrey;
         }
     }
 }

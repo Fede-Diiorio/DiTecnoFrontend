@@ -4,7 +4,7 @@
     padding: 1rem;
     border-radius: 2rem;
     border: 2px solid $lightPrimaryColor;
-    box-shadow: 5px 7px 9px 2px $black;
+    box-shadow: $boxShadow $black;
     max-width: 60rem;
     background-color: $white;
 

@@ -22,6 +22,8 @@ export default defineConfig({
         $darkGrey: #3d3d3d;
         $red: #d61d16;
         $darkRed: #8a130f;
+        $boxShadow: 5px 7px 9px 2px;
+        $secondaryBoxShadow: 6px 11px 20px 1px;
         `
       }
     }
