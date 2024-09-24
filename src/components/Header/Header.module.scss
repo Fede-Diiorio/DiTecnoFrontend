@@ -1,7 +1,9 @@
 .background {
-    border-bottom: 2px solid $lightPrimaryColor;
-    padding: 2rem 0;
+    position: relative; // Esto crea un contexto de apilamiento
+    z-index: 100; // Un valor alto para que sobresalga sobre otros elementos
     box-shadow: $boxShadow $black;
+    padding: 2rem 0;
+    border-bottom: 2px solid $lightPrimaryColor;
 
     .container {
         display: flex;
@@ -23,7 +25,7 @@
             gap: 1rem;
 
             .icon {
-                color: $lightPrimaryColor;
+                color: $primaryColor;
                 font-size: 2.5rem;
                 transition: all .3s ease-in-out;
                 max-width: 24rem;
