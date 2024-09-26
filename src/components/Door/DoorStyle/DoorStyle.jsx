@@ -8,12 +8,21 @@ const DoorStyle = () => {
 
     const { opening } = useParams();
     const [styles, setStyles] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        getDoorsStyle(opening).then(data => {
-            setStyles(data);
-        });
+        setLoading(true);
+
+        getDoorsStyle(opening)
+            .then(data => { setStyles(data); })
+            .finally(() => setLoading(false));
     }, [opening]);
+
+    if (loading) {
+        return (
+            <Selector title={'Cargando...'}></Selector>
+        );
+    };
 
     return (
         <>

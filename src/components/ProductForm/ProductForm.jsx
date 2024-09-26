@@ -16,6 +16,7 @@ const ProductForm = () => {
     const [colors, setColors] = useState([]);
     const [typeSpecification, setTypeSpecification] = useState({});
     const [formData, setFormData] = useState(initializeFormData(opening, style, type, design));
+    const [loading, setLoading] = useState(true);
 
     const { addItem } = useCart();
     const navigate = useNavigate();
@@ -31,12 +32,20 @@ const ProductForm = () => {
         }, [opening, style, type, design]);
     };
 
-    console.log(typeSpecification);
-
     // Obtener colores disponibles
     useEffect(() => {
-        getColors().then(setColors);
+        setLoading(true);
+
+        getColors()
+            .then(setColors)
+            .finally(() => setLoading(false))
     }, []);
+
+    if (loading) {
+        return (
+            <Selector title={'Cargando...'}></Selector>
+        );
+    };
 
     return (
         <Selector title={'Cargar producto'} description={'Complete el formulario para cargar el producto al pedido'}>

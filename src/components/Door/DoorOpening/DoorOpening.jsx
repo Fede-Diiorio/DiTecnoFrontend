@@ -6,12 +6,21 @@ import Button from "../../Button/Button";
 const DoorOpening = () => {
 
     const [openings, setOpenings] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        getDoors().then(data => {
-            setOpenings(data);
-        });
+        setLoading(true);
+
+        getDoors()
+            .then(data => { setOpenings(data); })
+            .finally(() => { setLoading(false) });
     }, []);
+
+    if (loading) {
+        return (
+            <Selector title={'Cargando...'}></Selector>
+        );
+    };
 
     return (
         <>
