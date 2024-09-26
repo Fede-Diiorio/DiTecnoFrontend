@@ -24,8 +24,10 @@
             border: 2px solid transparent;
             border-radius: 0.5rem;
             transition: border-color 0.3s ease;
+            padding: .5rem 0;
+            min-width: 8rem;
 
-            p {
+            .paragraph {
                 color: $black;
                 margin-bottom: .5rem;
             }
@@ -37,6 +39,18 @@
             .colorImage {
                 max-width: 100%;
                 border-radius: 0.25rem;
+            }
+        }
+    }
+}
+
+@media(max-width: 480px) {
+    .colors {
+        li {
+            .colorLabel {
+                &:hover {
+                    border-color: transparent;
+                }
             }
         }
     }

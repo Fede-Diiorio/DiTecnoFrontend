@@ -6,5 +6,9 @@
         gap: 1rem;
         align-items: center;
         margin-bottom: .5rem;
+
+        label {
+            min-width: 9.5rem;
+        }
     }
 }

@@ -84,6 +84,12 @@
 
             .field {
                 margin-bottom: 1rem;
+                flex-direction: column;
+                align-items: flex-start;
+
+                input {
+                    width: 100%;
+                }
             }
         }
     }

@@ -14,7 +14,7 @@ const ColorSelector = ({ colors, formData, handleInputChange }) => {
                         onChange={(e) => handleInputChange(e, formData)}
                     />
                     <label htmlFor={`color-${color.slug}`} className={classes.colorLabel}>
-                        <p>{color.name}</p>
+                        <p className={classes.paragraph}>{color.name}</p>
                         <img className={`doorColor ${classes.colorImage}`} src={color.image} alt={`Imagen del color ${color.slug}`} />
                     </label>
                 </li>

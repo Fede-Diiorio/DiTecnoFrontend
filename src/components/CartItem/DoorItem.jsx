@@ -4,7 +4,7 @@ import { useLocalStorage } from '../../context/LocalStorageContext';
 import { toast } from 'react-toastify';
 import { FaTrashCan } from 'react-icons/fa6';
 
-const DoorItem = ({ product, opening, image, height, width, casementPayload, casement2Payload, casement3Payload, colorsPayload, quantity }) => {
+const DoorItem = ({ product, opening, image, height, width, casementPayload, casement2Payload, casement3Payload, colorsPayload, quantity, id }) => {
 
     const { removeItem } = useCart();
     const { removeProductFromLocalStorage } = useLocalStorage();

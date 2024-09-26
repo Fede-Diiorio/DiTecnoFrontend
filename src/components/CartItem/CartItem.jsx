@@ -38,6 +38,7 @@ const CartItem = ({ product, type, quantity, id, style, colors, design, opening,
                 casement3Payload={casement3Payload}
                 colorsPayload={colorsPayload}
                 quantity={quantity}
+                id={id}
             />
         );
     }
@@ -57,6 +58,7 @@ const CartItem = ({ product, type, quantity, id, style, colors, design, opening,
                 colorsPayload={colorsPayload}
                 quantity={quantity}
                 glassType={glassType}
+                id={id}
             />
         );
     }
