@@ -21,6 +21,8 @@ import ErrorForm from './components/ErrorForm/ErrorForm';
 
 function App() {
 
+  console.log('Proyecto cargado')
+
   return (
     <main>
       <BrowserRouter>
