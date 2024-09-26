@@ -7,12 +7,20 @@ import classes from './DoorType.module.scss'
 const DoorType = () => {
     const { opening, style } = useParams();
     const [types, setTypes] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        getDoorsType(opening, style).then(data => {
-            setTypes(data);
-        });
+        setLoading(true);
+        getDoorsType(opening, style)
+            .then(data => { setTypes(data); })
+            .finally(() => setLoading(false));
     }, []);
+
+    if (loading) {
+        return (
+            <Selector title={'Cargando...'}></Selector>
+        );
+    };
 
     return (
         <>

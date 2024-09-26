@@ -9,14 +9,17 @@ const WindowStyle = () => {
 
     const { opening } = useParams();
     const [styles, setStyles] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        getWindowsStyle(opening).then(data => {
-            setStyles(data);
-        });
+        setLoading(true);
+
+        getWindowsStyle(opening)
+            .then(data => { setStyles(data); })
+            .finally(() => setLoading(false));
     }, [opening]);
 
-    if (!styles) {
+    if (loading) {
         return (
             <Selector title={'Cargando...'}></Selector>
         );

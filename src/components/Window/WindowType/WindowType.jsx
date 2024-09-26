@@ -7,12 +7,21 @@ import classes from './WindowType.module.scss';
 const WindowType = () => {
     const { opening, style } = useParams();
     const [colors, setColors] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        getWindowsTypes(opening, style).then(data => {
-            setColors(data);
-        });
+        setLoading(true);
+
+        getWindowsTypes(opening, style)
+            .then(data => { setColors(data); })
+            .finally(() => setLoading(false));
     }, []);
+
+    if (loading) {
+        return (
+            <Selector title={'Cargando...'}></Selector>
+        );
+    };
 
     return (
         <>
