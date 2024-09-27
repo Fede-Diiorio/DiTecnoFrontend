@@ -1,5 +1,28 @@
-.image {
-    width: 9rem;
+.link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $white;
     border: 2px solid $lightPrimaryColor;
     border-radius: .5rem;
+    padding: .5rem;
+    transition: all .3s ease-in-out;
+
+    .title {
+        color: $lightPrimaryColor;
+        transition: all .3s ease-in-out;
+    }
+
+    .image {
+        width: 9rem;
+    }
+
+    &:hover {
+        scale: 1.1;
+        border: 2px solid $secondaryColor;
+
+        .title {
+            color: $primaryColor;
+        }
+    }
 }

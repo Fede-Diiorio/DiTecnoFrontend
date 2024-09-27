@@ -2,7 +2,7 @@ import Selector from "../../Selector/Selector";
 import { getWindowsStyle } from "../../../utils/getWindows";
 import { useEffect, useState } from "react";
 import Button from "../../Button/Button";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import classes from './WindowStyle.module.scss';
 
 const WindowStyle = () => {
@@ -30,10 +30,10 @@ const WindowStyle = () => {
             <Selector title={'Estilo de apertura'} description={'Seleccione el estilo que desea para su apertura.'}>
                 <ul className='optionButtonflex'>
                     {styles.map(product => (
-                        <li key={product.id}>
+                        <Link key={product.id} to={product.slug} className={classes.link}>
+                            <h4 className={classes.title}>{product.name}</h4>
                             <img src={product.image} alt={product.name} className={classes.image} />
-                            <Button to={product.slug}>{product.name}</Button>
-                        </li>
+                        </Link>
                     ))}
                 </ul>
             </Selector>
