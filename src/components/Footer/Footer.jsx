@@ -12,10 +12,10 @@ const Footer = () => {
                         <Link to='/'><img className={classes.infoLogo} src={ditecnoLogo} alt="Logo de la Empresa" /></Link>
 
                         <div className={classes.infoColumn}>
-                            <h4>Compañia</h4>
+                            <h4>Compañía</h4>
                             <ul>
                                 <li><Link className={classes.infoLi} to={'/nosotros'}>Sobre Nosotros</Link></li>
-                                <li><Link className={classes.infoLi} to={'/galeria'}>Galeria</Link></li>
+                                <li><Link className={classes.infoLi} to={'/galeria'}>Galería</Link></li>
                             </ul>
                         </div>
 
@@ -29,7 +29,7 @@ const Footer = () => {
                         </div>
 
                         <div className={classes.infoColumn}>
-                            <h4>Contáctanos</h4>
+                            <h4>Contactanos</h4>
                             <ul className={classes.icons}>
                                 <li><a href="https://www.facebook.com/ditecnoaberturas/" target="_blank" className={classes.infoIcon}><FaSquareFacebook className={classes.icon} /></a></li>
                                 <li><a href="https://www.linkedin.com/in/roberto-di-iorio-b976a726/?originalSubdomain=ar" target='_blank' className={classes.infoIcon}><FaLinkedin className={classes.icon} /></a></li>
