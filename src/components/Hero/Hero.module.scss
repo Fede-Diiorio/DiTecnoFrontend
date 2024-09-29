@@ -3,35 +3,60 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 48.5vh;
+    height: 88vh;
     position: relative;
     border-bottom: 2px solid $lightPrimaryColor;
 
     .shadow {
         position: absolute;
-        background-color: rgba(0, 0, 0, .5);
+        background-color: rgba(0, 0, 0, .55);
         width: 100%;
         height: 100%;
 
         .paramsOptions {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-evenly;
             align-items: center;
+            height: 85vh;
 
-            img {
-                width: 20rem;
-                margin-top: 5rem;
+            .title {
+                img {
+                    width: 20rem;
+                }
+
+                h3 {
+                    color: $white;
+                }
+
+                h1 {
+                    display: none;
+                }
+
             }
 
+            .steps {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
 
-            h3 {
-                color: $white;
+                p,
+                h4 {
+                    color: $white;
+                }
+
+                h4 {
+                    margin-bottom: 2rem;
+                }
+
+                .cards {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    gap: 2rem;
+                }
             }
 
-            h1 {
-                display: none;
-            }
 
             .heroIcon {
                 color: $grey;
@@ -68,6 +93,12 @@
 
                 h4 {
                     margin-bottom: 2rem;
+                }
+
+                .steps {
+                    .cards {
+                        display: none;
+                    }
                 }
             }
         }

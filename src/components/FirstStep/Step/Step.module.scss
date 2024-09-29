@@ -3,11 +3,13 @@
         border-bottom: 3px solid $lightPrimaryColor;
         width: 3rem;
         margin-bottom: .5rem;
+        color: $white;
     }
 
     .cardParagraph {
         p {
             line-height: 1;
+            color: $white;
         }
     }
 }

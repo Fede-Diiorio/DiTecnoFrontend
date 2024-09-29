@@ -18,6 +18,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ErrorView from './components/ErrorView/ErrorView';
 import ErrorForm from './components/ErrorForm/ErrorForm';
+import Hero from './components/Hero/Hero';
 
 function App() {
 
@@ -31,7 +32,7 @@ function App() {
             <ScrollToTop />
             <Header />
             <Routes>
-              <Route path='/' element={<IndexBody />} />
+              <Route path='/' element={<Hero />} />
               <Route path='/producto' element={<Product />} />
               <Route path='/puerta/*' element={<Door />} />
               <Route path='/ventana/*' element={<Window />} />
