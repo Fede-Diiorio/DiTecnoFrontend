@@ -4,8 +4,14 @@ import DoorSyle from './DoorStyle/DoorStyle';
 import DoorType from './DoorType/DoorType';
 import DoorDesign from './DoorDesign/DoorDesign';
 import ProductForm from '../ProductForm/ProductForm';
+import { useTitle } from '../../utils/useTitle'
+import { useLocation } from 'react-router-dom';
 
 const Door = () => {
+
+    const location = useLocation();
+    const condition = location.pathname.includes('/puerta');
+    useTitle(condition, 'DiTecno | Puertas');
 
     return (
         <section >

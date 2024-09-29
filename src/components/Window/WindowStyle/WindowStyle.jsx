@@ -1,15 +1,17 @@
 import Selector from "../../Selector/Selector";
 import { getWindowsStyle } from "../../../utils/getWindows";
 import { useEffect, useState } from "react";
-import Button from "../../Button/Button";
 import { Link, useParams } from "react-router-dom";
 import classes from './WindowStyle.module.scss';
+import { useTitle } from "../../../utils/useTitle";
 
 const WindowStyle = () => {
 
     const { opening } = useParams();
     const [styles, setStyles] = useState([]);
     const [loading, setLoading] = useState(true);
+
+    useTitle(opening, `DiTecno | Ventana apertura ${opening}`);
 
     useEffect(() => {
         setLoading(true);

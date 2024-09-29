@@ -2,6 +2,7 @@ import Selector from '../Selector/Selector';
 import classes from './Checkout.module.scss';
 import { useState } from 'react';
 import { useGenerateOrder } from '../../utils/generateOrder';
+import { useTitle } from '../../utils/useTitle';
 
 const Checkout = () => {
 
@@ -9,6 +10,8 @@ const Checkout = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
+
+    useTitle(true, 'DiTecno | Finalizar compra');
 
     const handleSubmit = async (e) => {
         e.preventDefault();

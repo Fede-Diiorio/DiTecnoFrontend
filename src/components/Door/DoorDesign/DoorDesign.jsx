@@ -3,11 +3,14 @@ import { getDoorsDesigns } from "../../../utils/getDoors";
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import classes from './DoorDesign.module.scss';
+import { useTitle } from "../../../utils/useTitle";
 
 const DoorDesign = () => {
     const { opening, style, type } = useParams();
     const [designs, setDesigns] = useState([]);
     const [loading, setLoading] = useState(true);
+
+    useTitle(designs, `DiTecno | Diseños de puerta ${style}`)
 
     useEffect(() => {
         setLoading(true);

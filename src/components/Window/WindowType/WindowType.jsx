@@ -3,11 +3,14 @@ import { getWindowsTypes } from "../../../utils/getWindows";
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import classes from './WindowType.module.scss';
+import { useTitle } from "../../../utils/useTitle";
 
 const WindowType = () => {
     const { opening, style } = useParams();
     const [colors, setColors] = useState([]);
     const [loading, setLoading] = useState(true);
+
+    useTitle(opening, `DiTecno | Ventana ${style}`)
 
     useEffect(() => {
         setLoading(true);

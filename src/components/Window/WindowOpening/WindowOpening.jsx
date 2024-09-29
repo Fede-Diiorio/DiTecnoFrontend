@@ -2,11 +2,14 @@ import Selector from "../../Selector/Selector";
 import { getWindows } from "../../../utils/getWindows";
 import { useEffect, useState } from "react";
 import Button from "../../Button/Button";
+import { useTitle } from '../../../utils/useTitle';
 
 const WindowOpening = () => {
 
     const [openings, setOpenings] = useState([]);
     const [loading, setLoading] = useState(true);
+
+    useTitle(openings, `DiTecno | Ventanas`, openings);
 
     useEffect(() => {
         setLoading(true);

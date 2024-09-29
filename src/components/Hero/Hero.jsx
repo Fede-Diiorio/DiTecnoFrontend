@@ -1,8 +1,12 @@
 import classes from './Hero.module.scss';
 import logo from '../../assets/ditecnoLogoCompleto.png'
 import Button from '../Button/Button';
+import { useTitle } from '../../utils/useTitle';
 
 const Hero = () => {
+
+    useTitle();
+
     return (
         <section className={classes.heroImage}>
             <div className={classes.shadow}>

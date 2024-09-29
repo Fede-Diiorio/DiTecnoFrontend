@@ -10,6 +10,7 @@ import { handleInputChange, initializeFormData, handleSubmit } from '../../utils
 import ColorSelector from './ColorSelector/ColorSelector';
 import GlassOptions from './GlassOptions/GlassOptions';
 import CasementComponent from './FieldsType/CasementComponent';
+import { useTitle } from '../../utils/useTitle';
 
 const ProductForm = () => {
     const { opening, style, type, design } = useParams();
@@ -23,10 +24,12 @@ const ProductForm = () => {
 
     // Obtener especificaciones del product
     if (!design) {
+        useTitle(opening, `DiTecno | Ventanas - Formulario`);
         useEffect(() => {
             getWindowSpecification(opening, style, type).then(setTypeSpecification);
         }, [opening, style, type]);
     } else {
+        useTitle(opening, `DiTecno | Puertas - Formulario`);
         useEffect(() => {
             getDoorModel(opening, style, type, design).then(setTypeSpecification)
         }, [opening, style, type, design]);

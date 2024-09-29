@@ -3,12 +3,15 @@ import { getDoorsStyle } from "../../../utils/getDoors";
 import { useEffect, useState } from "react";
 import Button from "../../Button/Button";
 import { useParams } from "react-router-dom";
+import { useTitle } from "../../../utils/useTitle";
 
 const DoorStyle = () => {
 
     const { opening } = useParams();
     const [styles, setStyles] = useState([]);
     const [loading, setLoading] = useState(true);
+
+    useTitle(opening, `DiTecno | Puertas apertura ${opening}`)
 
     useEffect(() => {
         setLoading(true);

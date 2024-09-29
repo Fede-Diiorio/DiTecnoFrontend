@@ -5,12 +5,14 @@ import Button from '../Button/Button'
 import Selector from '../Selector/Selector';
 import CartItem from "../CartItem/CartItem";
 import { toast } from "react-toastify";
+import { useTitle } from "../../utils/useTitle";
 
 const CartView = () => {
     const { cart, clearCart, totalQuantity } = useCart();
     const { clearCartFromLocalStorage } = useLocalStorage();
     const successNotify = () => toast.success('Su carrito se ha vaciado.');
 
+    useTitle(cart, 'DiTecno | Carrito', [cart]);
 
     const handlerClearCart = () => {
         successNotify();
