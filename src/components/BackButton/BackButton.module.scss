@@ -1,0 +1,38 @@
+.backButton {
+    border: 2px solid $white;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background-color: $white;
+    padding: 0 .5rem 0 0;
+    border-radius: .5rem;
+    box-shadow: $boxShadow $black;
+    transition: all .3s ease-in-out;
+
+    margin: 1rem 0;
+
+    p {
+        margin: 0;
+        color: $lightPrimaryColor;
+        transition: all .3s ease-in-out;
+    }
+
+    .backArrow {
+        font-size: 3rem;
+        color: $lightPrimaryColor;
+        transition: all .3s ease-in-out;
+    }
+
+    &:hover {
+        scale: 1.1;
+        border: 2px solid $lightPrimaryColor;
+
+        .backArrow {
+            color: $primaryColor;
+        }
+
+        p {
+            color: $primaryColor;
+        }
+    }
+}

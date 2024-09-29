@@ -24,11 +24,11 @@ const DoorItem = ({ product, opening, image, height, width, casementPayload, cas
                 <div className={classes.information}>
 
                     <div className={classes.dimensions}>
-                        <p className={classes.data}><strong>Alto (cm): </strong>{height}</p>
-                        <p className={classes.data}><strong>Ancho (cm): </strong>{width}</p>
-                        <p className={classes.data}><strong>Ancho de hoja (cm): </strong>{casementPayload}</p>
-                        <p className={classes.data}><strong>Alto de hoja (cm): </strong>{casement2Payload}</p>
-                        <p className={classes.data}><strong>Alto de hoja 2 (cm): </strong>{casement3Payload}</p>
+                        <p className={classes.data}><strong>Alto [metros]: </strong>{height}</p>
+                        <p className={classes.data}><strong>Ancho [metros]: </strong>{width}</p>
+                        <p className={classes.data}><strong>Ancho de hoja [metros]: </strong>{casementPayload}</p>
+                        <p className={classes.data}><strong>Alto de hoja [metros]: </strong>{casement2Payload}</p>
+                        <p className={classes.data}><strong>Alto de hoja 2 [metros]: </strong>{casement3Payload}</p>
                     </div>
 
                     <div className={classes.info}>
