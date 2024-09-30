@@ -28,7 +28,7 @@ const TwoCasement = ({ formData, handleInputChange }) => {
             </div>
 
             <div className={classes.field}>
-                <label>Alto[metros]: </label>
+                <label>Alto [metros]: </label>
                 <input
                     type="number"
                     min={heightMin}
