@@ -27,7 +27,7 @@ const DoorType = () => {
 
     return (
         <>
-            <Selector title={'Estilo de la puerta'} description={'Seleccione una de las variantes disponibles que sea de su agrado.'}>
+            <Selector title={'Estilo de la puerta'} description={'Elegí una de las variantes disponibles en nuestro catálogo.'}>
                 <ul className={classes.ul}>
                     {types.map(product => (
                         <li key={product.id}>

@@ -11,7 +11,7 @@ const Product = () => {
     useTitle(condition, 'DiTecno | Selección de producto')
 
     return (
-        <Selector title={'Elija una opción'} description={'Para precisar su presupuesto de manera óptima, complete con la opción deseada.'}>
+        <Selector title={'Eligí una opción'} description={'Seleccioná la opción que necesites para poder comenzar a cargar tu pedido.'}>
             <div className='optionButtonflex'>
                 <Button to={'/puerta'}>Puerta</Button>
                 <Button to={'/ventana'}>Ventana</Button>

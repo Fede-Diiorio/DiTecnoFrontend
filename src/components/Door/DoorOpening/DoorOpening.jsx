@@ -24,7 +24,7 @@ const DoorOpening = () => {
 
     return (
         <>
-            <Selector title={'Tipo de apertura'} description={'Seleccione la dirección de apertura para su puerta.'}>
+            <Selector title={'Dirección de apertura'} description={'Seleccioná la dirección de apertura para su puerta entre las opciones disponibles.'}>
                 <ul className='optionButtonflex'>
                     {openings.map(product => (
                         <li key={product.id}>

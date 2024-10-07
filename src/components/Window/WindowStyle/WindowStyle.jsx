@@ -29,7 +29,7 @@ const WindowStyle = () => {
 
     return (
         <>
-            <Selector title={'Estilo de apertura'} description={'Seleccione el estilo que desea para su apertura.'}>
+            <Selector title={'Tipo de ventana'} description={'Seleccioná el tipo de ventana que más te guste.'}>
                 <ul className='optionButtonflex'>
                     {styles.map(product => (
                         <Link key={product.id} to={product.slug} className={classes.link}>

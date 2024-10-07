@@ -28,7 +28,7 @@ const WindowType = () => {
 
     return (
         <>
-            <Selector title={'Tipo de abertura'} description={'Seleccione la configuración de abertura que sea de su preferencia.'}>
+            <Selector title={'Estilo de ventana'} description={'Seleccioná una de las posibles variantes disponibles en nuestro catálogo.'}>
                 <ul className={classes.ul}>
                     {colors.map(product => (
                         <li key={product.id}>

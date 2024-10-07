@@ -27,7 +27,7 @@ const WindowOpening = () => {
 
     return (
         <>
-            <Selector title={'Dirección de apertura'} description={'Seleccione la dirección de apertura para su ventana.'}>
+            <Selector title={'Dirección de apertura'} description={'Seleccioná la dirección de apertura para tu ventana.'}>
                 <ul className='optionButtonflex'>
                     {openings.map(product => (
                         <li key={product.id}>

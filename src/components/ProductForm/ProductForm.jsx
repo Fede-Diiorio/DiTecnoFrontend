@@ -51,7 +51,7 @@ const ProductForm = () => {
     };
 
     return (
-        <Selector title={'Cargar producto'} description={'Complete el formulario para cargar el producto al pedido'}>
+        <Selector title={'Cargar producto'} description={'Completá el formulario para cargar el producto generado a tu pedido.'}>
             <form className={classes.form} onSubmit={(e) => handleSubmit(e, formData, addItem, navigate)}>
                 <div className={classes.formContainer}>
                     <img src={typeSpecification.image} alt={typeSpecification.name} className={classes.image} />

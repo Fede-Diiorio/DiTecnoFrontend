@@ -29,7 +29,7 @@ const DoorStyle = () => {
 
     return (
         <>
-            <Selector title={'Cantidad de hojas'} description={'Seleccione la cantidad de hojas requerida en su apertura.'}>
+            <Selector title={'Cantidad de hojas'} description={'Seleccioná la cantidad de hojas requerida en su apertura. Tené en cuenta que el ancho máximo de cada puerta es de 1.5 metros.'}>
                 <ul className='optionButtonflex'>
                     {styles.map(product => (
                         <li key={product.id}>
